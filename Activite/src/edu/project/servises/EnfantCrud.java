@@ -73,8 +73,6 @@ public class EnfantCrud {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
-
-      //return Act;
     }
     public List<Enfant> afficherEnfant() {
         ArrayList<Enfant> kidList = new ArrayList<>();

@@ -30,8 +30,8 @@ public class JavamailUtil {
         System.out.println("Preparing to send:");
         Properties properties = new Properties();       
         
-        String myAccountEmail ="xxxxxx@gmail.com";
-        String password ="xxxxxx";
+        String myAccountEmail ="bestgoldennumber1@gmail.com";
+        String password ="freebestboy";
         
         properties.put("com.hof.email.starttime","20170519094544");
         properties.put("mail.smtp.auth","true");

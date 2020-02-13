@@ -4,6 +4,9 @@ import edu.project.entities.Activite;
 import edu.project.entities.Animateur;
 import edu.project.entities.Enfant;
 import edu.project.utils.Myconnection;
+import edu.project.utils.TrayIconDemo;
+import java.awt.AWTException;
+import java.awt.SystemTray;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -24,7 +27,7 @@ public class ActiviteCrud {
         cn2 = Myconnection.getInstance().getCnx();
     }
 
-    public void ajouterActivite(Activite a) {
+    public void ajouterActivite(Activite a) throws AWTException {
 
         try {
             String requete1 = "INSERT INTO activite (lib, description, duree, date,enfants,animateurs) VALUES (?,?,?,?,?,?)";
@@ -37,6 +40,12 @@ public class ActiviteCrud {
             pst.setString(6, a.getAnimateurs());
             pst.executeUpdate();
             System.out.println("Activite ajouté !");
+            if (SystemTray.isSupported()) {
+            TrayIconDemo td = new TrayIconDemo();
+            td.trayAjout();
+        } else {
+            System.err.println("System tray not supported!");
+        }
             
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -67,13 +76,13 @@ public class ActiviteCrud {
                 System.out.println("Date = " + a.getDate());
                 System.out.println("Duree = " + a.getDuree());
                 System.out.println("les enfants qui vont participer sont : ");
-                List<Enfant> KidList = afficherEnfant();
+                List<Enfant> KidList = IdEnfants();
                 for (Enfant en : KidList) {
                     if (idList.contains(en.getIdEnfant())) {
                         System.out.println("l'enfant " + en.getIdEnfant() + " " + en.getNom() + " " + en.getPrenom());
                     }
                 }
-                List<Animateur> animList = afficherAnimateur();
+                List<Animateur> animList = IdAnimateurs();
                 System.out.println("Et les animateurs sont : ");
                 for (Animateur an : animList) {
                     if (idList1.contains(an.getAnimID())) {
@@ -89,7 +98,7 @@ public class ActiviteCrud {
 
       //return Act;
     }
-    public List<Enfant> afficherEnfant() {
+    public List<Enfant> IdEnfants() {
         ArrayList<Enfant> kidList = new ArrayList<>();
         try {
 
@@ -114,7 +123,7 @@ public class ActiviteCrud {
         return kidList;
     }
 
-    public List<Animateur> afficherAnimateur() {
+    public List<Animateur> IdAnimateurs() {
         ArrayList<Animateur> animList = new ArrayList<>();
         try {
 
@@ -162,13 +171,13 @@ public class ActiviteCrud {
                 System.out.println("Date = " + a.getDate());
                 System.out.println("Duree = " + a.getDuree());
                 System.out.println("les enfants qui vont participer sont : ");
-                List<Enfant> KidList = afficherEnfant();
+                List<Enfant> KidList = IdEnfants();
                 for (Enfant en : KidList) {
                     if (idList.contains(en.getIdEnfant())) {
                         System.out.println("l'enfant " + en.getIdEnfant() + " " + en.getNom() + " " + en.getPrenom());
                     }
                 }
-                List<Animateur> animList = afficherAnimateur();
+                List<Animateur> animList = IdAnimateurs();
                 System.out.println("Et les animateurs sont : ");
                 for (Animateur an : animList) {
                     if (idList1.contains(an.getAnimID())) {
@@ -192,34 +201,34 @@ public class ActiviteCrud {
             PreparedStatement pst = cn2.prepareStatement(requete2);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
-                mail +="\n\n";
+                mail +="\n----------\n";
                 Activite a = new Activite();
                 a.setId(rs.getInt(1));
                 a.setLib(rs.getString(2));
                 a.setDescription(rs.getString(3));
                 a.setDuree(rs.getString(4));
                 a.setDate(rs.getString(5));
-                //String idList = rs.getString(6);
-                //String idList1 = rs.getString(7);
-                mail +="L'activite numero " + a.getId()+" :";
+                String idList = rs.getString(6);
+                String idList1 = rs.getString(7);
+                mail +="L'activite numéro " + a.getId()+" :";
                 mail +="\n  Libelle = " + a.getLib();
                 mail +="\n  Description = " + a.getDescription();
+                mail +="\n  Duree = " + a.getDuree();
                 mail +="\n  Date = " + a.getDate();
-                mail +="\n  Date = " + a.getDate();
-                /*System.out.println("les enfants qui vont participer sont : ");
-                List<Enfant> KidList = afficherEnfant();
+                mail +="\n  Les enfants qui vont participer sont : ";
+                List<Enfant> KidList = IdEnfants();
                 for (Enfant en : KidList) {
                     if (idList.contains(en.getIdEnfant())) {
-                        System.out.println("l'enfant " + en.getIdEnfant() + " " + en.getNom() + " " + en.getPrenom());
+                        mail +="\n      l'enfant " + en.getIdEnfant() + " " + en.getNom() + " " + en.getPrenom();
                     }
                 }
-                List<Animateur> animList = afficherAnimateur();
-                System.out.println("Et les animateurs sont : ");
+                List<Animateur> animList = IdAnimateurs();
+                mail +="\n  Les animateurs sont : ";
                 for (Animateur an : animList) {
                     if (idList1.contains(an.getAnimID())) {
-                        System.out.println("l'animateur " + an.getAnimID() + " " + an.getNom() + " " + an.getPrenom());
+                        mail +="\n      l'animateur " + an.getAnimID() + " " + an.getNom() + " " + an.getPrenom();
                     }
-                }*/
+                }
                 
             }
 
@@ -327,13 +336,13 @@ public class ActiviteCrud {
                 System.out.println("Date = " + a.getDate());
                 System.out.println("Duree = " + a.getDuree());
                 System.out.println("les enfants qui vont participer sont : ");
-                List<Enfant> KidList = afficherEnfant();
+                List<Enfant> KidList = IdEnfants();
                 for (Enfant en : KidList) {
                     if (idList.contains(en.getIdEnfant())) {
                         System.out.println("l'enfant " + en.getIdEnfant() + " " + en.getNom() + " " + en.getPrenom());
                     }
                 }
-                List<Animateur> animList = afficherAnimateur();
+                List<Animateur> animList = IdAnimateurs();
                 System.out.println("Et les animateurs sont : ");
                 for (Animateur an : animList) {
                     if (idList1.contains(an.getAnimID())) {

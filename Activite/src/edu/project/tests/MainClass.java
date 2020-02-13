@@ -1,16 +1,18 @@
 package edu.project.tests;
 
+import edu.project.utils.PDFutil;
+import edu.project.utils.TrayIconDemo;
 import edu.project.entities.Activite;
 import edu.project.entities.Enfant;
 import edu.project.entities.JavamailUtil;
 import edu.project.servises.ActiviteCrud;
 import edu.project.servises.EnfantCrud;
+import java.awt.SystemTray;
 
 
 public class MainClass {
     
   public static void main(String[] args) throws Exception {
-        
         ActiviteCrud Act = new ActiviteCrud();
         EnfantCrud Enf = new EnfantCrud();
         Activite A = new Activite();
@@ -19,14 +21,16 @@ public class MainClass {
         //Enf.ajouterEnfant(E);
         //Enf.trierEnfant("dateNaiss");
         Enf.modifierEnfant("E1","Abdelhak","Dimassi","1998-05-09","M");
-        //Act.ajouterActivite(A2);
-        //Act.ajouterActivite2();
+        Act.ajouterActivite(A2);
+        Act.ajouterActivite2();
         //Act.modifierActivite(28,"danse","salsa","30","2019-08-04","E4-E1-E5","A1-A7");
         //Act.SupprimerActivite(28);
         //Act.afficherActivite();
-        //JavamailUtil mail = new JavamailUtil();
-        //mail.sendMail("bestgoldennumber1@gmail.com");
+        /*JavamailUtil mail = new JavamailUtil();
+        mail.sendMail("bestgoldennumber1@gmail.com");*/
         //Act.rechercherActivite("duree", "60");
         //Act.trierActivite("date");
+        /*PDFutil pdf=new PDFutil();
+        pdf.FacturePdf();*/
         }    
 }
