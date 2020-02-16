@@ -4,7 +4,7 @@ import edu.project.utils.PDFutil;
 import edu.project.utils.TrayIconDemo;
 import edu.project.entities.Activite;
 import edu.project.entities.Enfant;
-import edu.project.entities.JavamailUtil;
+import edu.project.utils.JavamailUtil;
 import edu.project.servises.ActiviteCrud;
 import edu.project.servises.EnfantCrud;
 import java.awt.SystemTray;
@@ -15,22 +15,53 @@ public class MainClass {
   public static void main(String[] args) throws Exception {
         ActiviteCrud Act = new ActiviteCrud();
         EnfantCrud Enf = new EnfantCrud();
-        Activite A = new Activite();
-        Activite A2= new Activite("musique","mozart","45","2020-08-04","E4-E1","A1");
-        Enfant E= new Enfant("E80","eya","cherif","2020-02-05","F");
-        //Enf.ajouterEnfant(E);
-        //Enf.trierEnfant("dateNaiss");
-        Enf.modifierEnfant("E1","Abdelhak","Dimassi","1998-05-09","M");
-        Act.ajouterActivite(A2);
-        Act.ajouterActivite2();
+        
+    //CRUD Activite
+      //Ajout
+        //Activite A= new Activite("Alphabet anglais","Les 20 premières lettres","55","2020-08-04","E4-E1-E5-E2","A1");
+        //Act.ajouterActivite(A);
+        
+      //Modif Act
         //Act.modifierActivite(28,"danse","salsa","30","2019-08-04","E4-E1-E5","A1-A7");
-        //Act.SupprimerActivite(28);
+        
+      //Suppression Act
+        //Act.SupprimerActivite(51);
+        
+      //Affichage Act
         //Act.afficherActivite();
-        /*JavamailUtil mail = new JavamailUtil();
-        mail.sendMail("bestgoldennumber1@gmail.com");*/
+        
+      //Recherche Act
         //Act.rechercherActivite("duree", "60");
+        
+      //Tri Act
         //Act.trierActivite("date");
-        /*PDFutil pdf=new PDFutil();
-        pdf.FacturePdf();*/
+        
+    //CRUD Enfant
+      //Ajout Enf
+        //Enfant E= new Enfant("E80","eya","cherif","2020-02-05","F");
+        //Enf.ajouterEnfant(E);
+        
+      //Modif Enf
+        //Enf.modifierEnfant("E80","Abdelhak","Dimassi","1998-05-09","M");
+        
+      //Suppression Enf
+        //Enf.SupprimerEnfant("E80");
+        
+      //Affichage Enf
+        //Enf.afficher();
+        
+      //Recherche Enf
+        //Enf.rechercherEnfant("nom", "bdel");
+        
+      //Tri Enf
+        //Enf.trierEnfant("dateNaiss");
+        
+    //EMAIL
+        //JavamailUtil mail = new JavamailUtil();
+        //mail.sendMail("bestgoldennumber1@gmail.com");
+        
+    //PDF
+        //PDFutil pdf=new PDFutil();
+        //pdf.listActivite();
         }    
 }

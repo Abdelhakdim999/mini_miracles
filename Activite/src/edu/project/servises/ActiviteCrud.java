@@ -70,7 +70,7 @@ public class ActiviteCrud {
                 a.setDate(rs.getString(5));
                 String idList = rs.getString(6);
                 String idList1 = rs.getString(7);
-                System.out.println("L'activite numero " + a.getId());
+                System.out.println("L'activite:");
                 System.out.println("Libelle = " + a.getLib());
                 System.out.println("Description = " + a.getDescription());
                 System.out.println("Date = " + a.getDate());
@@ -210,7 +210,7 @@ public class ActiviteCrud {
                 a.setDate(rs.getString(5));
                 String idList = rs.getString(6);
                 String idList1 = rs.getString(7);
-                mail +="L'activite numéro " + a.getId()+" :";
+                mail +="L'activite:";
                 mail +="\n  Libelle = " + a.getLib();
                 mail +="\n  Description = " + a.getDescription();
                 mail +="\n  Duree = " + a.getDuree();
@@ -311,7 +311,7 @@ public class ActiviteCrud {
     public void rechercherActivite(String besoin, String caractere) {
 
         ArrayList<Activite> activites = new ArrayList<>();
-        String requete = "select * from activite where " + besoin + " LIKE '" + caractere + "%'";
+        String requete = "select * from activite where " + besoin + " LIKE '%" + caractere + "%'";
 
         try {
             PreparedStatement pst2 = cn2.prepareStatement(requete);

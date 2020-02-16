@@ -145,7 +145,7 @@ public class EnfantCrud {
     }
     public void rechercherEnfant(String besoin, String caractere) {
 
-        String requete = "select * from enfant where " + besoin + " LIKE '" + caractere + "%'";
+        String requete = "select * from enfant where " + besoin + " LIKE '%" + caractere + "%'";
 
         try {
             PreparedStatement pst2 = cn2.prepareStatement(requete);

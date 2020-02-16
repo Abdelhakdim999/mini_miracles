@@ -1,4 +1,4 @@
-package edu.project.entities;
+package edu.project.utils;
 
 
 import edu.project.servises.ActiviteCrud;
