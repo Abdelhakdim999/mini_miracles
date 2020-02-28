@@ -1,0 +1,9 @@
+.head-background
+{
+    -fx-background-color: linear-gradient(to left,#158DA6 ,#93CB9B);
+}
+
+.head-background1
+{
+    -fx-background-color: linear-gradient(to left,#93CB9B,#8CD1EF);
+}

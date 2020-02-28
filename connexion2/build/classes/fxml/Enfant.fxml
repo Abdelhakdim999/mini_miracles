@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="978.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <Pane layoutX="49.0" layoutY="20.0" prefHeight="338.0" prefWidth="896.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="76.0" layoutX="41.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/kids.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="41.0" layoutY="94.0" prefHeight="0.0" prefWidth="763.0" />
+            <Label layoutX="123.0" layoutY="18.0" text="Enfant" textFill="#f19fa5">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="113.0" text="Nom :" textFill="#aeacac">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="186.0" text="Sexe :" textFill="#aeacac">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="279.0" layoutY="113.0" text="Prenom :" textFill="#aeacac">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="nom" layoutX="51.0" layoutY="156.0" text="*****" textFill="#4d4c4c">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="prenom" layoutX="279.0" layoutY="156.0" prefHeight="26.0" prefWidth="99.0" text="*****" textFill="#4d4c4c">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="sexe" layoutX="51.0" layoutY="224.0" text="*****" textFill="#4d4c4c">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Pane layoutX="-12.0" layoutY="268.0" prefHeight="70.0" prefWidth="920.0" style="-fx-background-color: #F0F0F0;">
+               <children>
+                  <Label layoutX="61.0" layoutY="26.0" textFill="#504df2">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="460.0" layoutY="3.0" text="Date de naissance :" textFill="#f19fa5">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="date" layoutX="475.0" layoutY="36.0" prefHeight="53.0" prefWidth="223.0" text="*******" textFill="#aeacac">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="279.0" layoutY="186.0" text="Parent :" textFill="#aeacac">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="parent" layoutX="279.0" layoutY="221.0" prefHeight="26.0" prefWidth="99.0" text="*****" textFill="#4d4c4c">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow color="#d7d2d2" height="50.0" radius="24.5" width="50.0" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

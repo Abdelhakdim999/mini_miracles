@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="569.0" prefWidth="949.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+    <children>
+      <Pane layoutX="29.0" layoutY="22.0" prefHeight="534.0" prefWidth="896.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="76.0" layoutX="41.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/forum.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="41.0" layoutY="94.0" prefHeight="0.0" prefWidth="763.0" />
+            <Label layoutX="123.0" layoutY="18.0" text="Sujet" textFill="#f19fa5">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutY="269.0" prefHeight="70.0" prefWidth="896.0" style="-fx-background-color: #F0F0F0;" />
+            <Label fx:id="id" layoutX="123.0" layoutY="51.0" prefHeight="27.0" prefWidth="53.0" text="id_sujet" textFill="#b2b0b0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutY="104.0" prefHeight="433.0" prefWidth="896.0">
+               <content>
+                  <VBox fx:id="pnl_scroll" prefHeight="420.0" prefWidth="896.0" />
+               </content>
+            </ScrollPane>
+         </children>
+         <effect>
+            <DropShadow color="#d7d2d2" height="50.0" radius="24.5" width="50.0" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="413.0" prefWidth="949.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+    <children>
+      <Pane layoutX="29.0" layoutY="22.0" prefHeight="338.0" prefWidth="896.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="76.0" layoutX="41.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/forum.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="41.0" layoutY="94.0" prefHeight="0.0" prefWidth="763.0" />
+            <Label layoutX="123.0" layoutY="18.0" text="Sujet" textFill="#f19fa5">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="113.0" text="Contenu" textFill="#aeacac">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="contenuLabel" alignment="TOP_LEFT" layoutX="58.0" layoutY="139.0" prefHeight="90.0" prefWidth="626.0" text="*****" textFill="#4d4c4c">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Pane layoutY="269.0" prefHeight="70.0" prefWidth="896.0" style="-fx-background-color: #F0F0F0;">
+               <children>
+                  <Label layoutX="61.0" layoutY="26.0" textFill="#504df2">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="aff_comm" layoutX="673.0" layoutY="41.0" onAction="#aff_com" stylesheets="@../styling/fullpackstyling.css" text="Afficher les commentaires">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <TextField fx:id="comm_text" layoutX="14.0" layoutY="2.0" prefHeight="62.0" prefWidth="626.0" promptText="Taper ici..." styleClass="text_field" stylesheets="@../styling/fullpackstyling.css" />
+                  <JFXButton fx:id="comm_button" layoutX="673.0" layoutY="-1.0" onAction="#comm_envoyer" stylesheets="@../styling/fullpackstyling.css" text="Envoyer Commentaire">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Label layoutX="498.0" layoutY="36.0" text="Date:" textFill="#f19fa5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateLabel" layoutX="555.0" layoutY="19.0" prefHeight="53.0" prefWidth="263.0" text="16" textFill="#aeacac">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="123.0" layoutY="51.0" prefHeight="27.0" prefWidth="53.0" text="id_sujet" textFill="#b2b0b0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="id_sujetLabel" layoutX="189.0" layoutY="53.0" prefHeight="27.0" prefWidth="53.0" text="*****">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <JFXButton fx:id="supp" layoutX="327.0" layoutY="26.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#supp_comm" prefHeight="8.0" prefWidth="90.0" ripplerFill="WHITE" style="-fx-background-color: #EEA0A6;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow color="#d7d2d2" height="50.0" radius="24.5" width="50.0" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

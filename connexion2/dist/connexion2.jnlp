@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="connexion2.jnlp">
+  <information>
+    <title>connexion2</title>
+    <vendor>Dimassi Abdelhak</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="connexion2.jar" size="510834" download="eager" />
+    <jar href="lib\AnimateFX.jar" size="188446" download="eager" />
+    <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
+    <jar href="lib\itext-2.1.7.jar" size="1130070" download="eager" />
+    <jar href="lib\javafx-17.0.jar" size="4293" download="eager" />
+    <jar href="lib\javax.mail.jar" size="659033" download="eager" />
+    <jar href="lib\jfoenix-1.4.0.jar" size="2363143" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="connexion2" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="home.Main"  name="connexion2" />
+  <update check="always"/>
+</jnlp>

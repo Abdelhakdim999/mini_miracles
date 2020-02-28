@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="742.0" prefWidth="1271.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherinscController">
+    <children>
+      <Pane layoutX="-2.0" prefHeight="145.0" prefWidth="1257.0" styleClass="head-background" stylesheets="@../styling/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="224.0" layoutY="47.0" text="Mini Miracles" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="227.0" layoutY="100.0" text="Interface admin" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="deconnecter" layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#deconnecter" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #EEA0A6;" text="Se déconnecter" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <VBox layoutY="145.0" prefHeight="596.0" prefWidth="255.0" style="-fx-background-color: #e8ffef;" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="145.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="252.0" textFill="#171717">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+            </Label>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Acceuil" textFill="#5b5858">
+               <font>
+                  <Font name="Ebrima" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleText="Project List" fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/acceuil.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="activite" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#acitive" prefHeight="43.0" prefWidth="252.0" ripplerFill="#6847d3" text="Activités" textFill="#f8818b">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="Ebrima" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleText="Project List" fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/activité.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="cantine" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#cantine" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Cantine" textFill="#5b5858">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cantine.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Evènements" textFill="#5b5858">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/evenement.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="planning" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#planning" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Planning" textFill="#5b5858">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleText="Project List" fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/planning.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="utilisateur" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#utilisateurs" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Les utilisateurs" textFill="#5b5858">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/users.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="forum" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#forum" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Forum" textFill="#5b5858">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/forum.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="kids" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#kids_list" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Liste des enfants" textFill="#5b5858">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/kids.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Pane layoutX="71.0" layoutY="44.0" prefHeight="131.0" prefWidth="142.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="303.0" layoutX="-64.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/mini_miracles.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </Pane>
+      <HBox alignment="CENTER" layoutX="251.0" layoutY="145.0" prefHeight="36.0" prefWidth="1019.0" style="-fx-background-color: #ffe3e5;" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="1.0">
+         <children>
+            <JFXButton prefHeight="30.0" prefWidth="200.0" text="Afficher les Inscriptions" textFill="#5b5858">
+               <font>
+                  <Font name="Ebrima" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="supprimerinscription" onAction="#supprimeruneinscription" prefHeight="30.0" prefWidth="200.0" text="Supprimer une Inscription" textFill="#5b5858">
+               <font>
+                  <Font name="Ebrima" size="14.0" />
+               </font>
+            </JFXButton>
+           
+         </children>
+      </HBox>
+      <Pane layoutX="249.0" layoutY="181.0" prefHeight="533.0" prefWidth="786.0">
+         <children>
+            <Button fx:id="baj" layoutX="432.0" layoutY="453.0" mnemonicParsing="false" onAction="#ajinsc" text="Inscription" visible="false" />
+            <TextField fx:id="tid" layoutX="254.0" layoutY="453.0" visible="false" />
+            <Button layoutX="48.0" layoutY="453.0" mnemonicParsing="false" onAction="#supprimerinsc" text="Supprimer une inscription" visible="false" />
+            <TableView fx:id="tabinsc" layoutX="7.0" layoutY="113.0" onMouseClicked="#remplirleschamps" prefHeight="425.0" prefWidth="1011.0" stylesheets="@../styling/table2.css">
+              <columns>
+                  <TableColumn fx:id="colnomenf" prefWidth="140.99998474121094" text="nom enfant" />
+                <TableColumn fx:id="colenf" prefWidth="124.0" text="Enfants" visible="false" />
+                  <TableColumn fx:id="colid" prefWidth="48.0" text="id" visible="false" />
+                  <TableColumn fx:id="coldate" minWidth="0.0" prefWidth="354.0" text="Date de l'inscription" />
+                <TableColumn fx:id="colnbj" prefWidth="271.0" text="Nombre de jours" />
+                  <TableColumn fx:id="colpri" prefWidth="244.0" text="Prix" />
+              </columns>
+            </TableView>
+            <Label layoutX="21.0" layoutY="46.0" text="La liste des enfants inscrit à la cantine :" textFill="#f84da3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+    
+</AnchorPane>

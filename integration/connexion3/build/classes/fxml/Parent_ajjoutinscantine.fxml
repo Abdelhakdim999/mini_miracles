@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <Pane layoutX="-2.0" prefHeight="145.0" prefWidth="1257.0" styleClass="head-background1" stylesheets="@../styling/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="224.0" layoutY="47.0" text="Mini Miracles" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="224.0" layoutY="92.0" prefHeight="36.0" prefWidth="142.0" text="Espace Parent" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="deconnecter" layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#deconnecter" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #EEA0A6;" text="Se déconnecter" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <VBox layoutY="145.0" prefHeight="596.0" prefWidth="255.0" style="-fx-background-color: #c8f4fa;" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="145.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="252.0" textFill="#171717">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+            </Label>
+            <JFXButton fx:id="kids" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#kids" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Mes enfants" textFill="#5b5858">
+               <font>
+                  <Font name="Ebrima" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleText="Project List" fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/add_kid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="insc_cantine" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#insc_cantine" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Inscription Cantine" textFill="#f8818b">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cantine.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="evenement" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#evenement" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Evènements" textFill="#5b5858">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/evenement.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="forum" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#forum" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Forum" textFill="#5b5858">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/forum.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Pane layoutX="71.0" layoutY="44.0" prefHeight="131.0" prefWidth="142.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="303.0" layoutX="-64.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/mini_miracles.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </Pane>
+      <HBox alignment="CENTER" layoutX="254.0" layoutY="145.0" prefHeight="36.0" prefWidth="1019.0" style="-fx-background-color: #ffe3e5;" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="1.0">
+         <children>
+            <ImageView fx:id="refresh" accessibleRole="BUTTON" fitHeight="35.0" fitWidth="54.0" onMouseClicked="#refresh" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/refresh.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="36.0" prefWidth="1019.0" style="-fx-background-color: #ffe3e5;">
+               <children>
+                  <JFXButton onAction="#inscrireenfant" prefHeight="28.0" prefWidth="200.0" text="Inscrire à la cantine" textFill="#5b5858">
+                     <font>
+                        <Font name="Cambria" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="menu" onAction="#consultermenu" prefHeight="25.0" prefWidth="197.0" text="Consulter les menus">
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <ScrollPane layoutX="255.0" layoutY="181.0" prefHeight="561.0" prefWidth="1019.0">
+         <content>
+            <VBox fx:id="pnl_scroll" prefHeight="546.0" prefWidth="1018.0">
+               <children>
+                  <Pane prefHeight="556.0" prefWidth="1019.0">
+                     <children>
+                        <TextField fx:id="tnbrj" layoutX="270.0" layoutY="229.0" onMouseExited="#ddd" />
+                        <TextField fx:id="tpri" disable="true" editable="false" layoutX="271.0" layoutY="286.0" />
+                        <Button fx:id="baj" layoutX="234.0" layoutY="315.0" mnemonicParsing="false" onAction="#ajinsc" text="Inscription" visible="false" />
+                        <DatePicker fx:id="dateinsc" layoutX="271.0" layoutY="173.0" />
+                        <Label layoutX="97.0" layoutY="120.0" text="Enfant" />
+                        <Label layoutX="96.0" layoutY="177.0" text=" Date de début de l'inscription" />
+                        <Label layoutX="97.0" layoutY="233.0" text="Nombre de jours" />
+                        <Label layoutX="96.0" layoutY="290.0" text="Prix en dt" />
+                        <TextField fx:id="tid" layoutX="271.0" layoutY="55.0" visible="false" />
+                        <Button layoutX="234.0" layoutY="383.0" mnemonicParsing="false" onAction="#supprimerinsc" text="Supprimer une inscription" visible="false" />
+                        <TableView fx:id="tabinsc" layoutX="539.0" layoutY="325.0" onMouseClicked="#remplirleschamps" prefHeight="209.0" prefWidth="476.0" visible="false">
+                           <columns>
+                              <TableColumn fx:id="colenf" prefWidth="124.0" text="Enfants" />
+                              <TableColumn fx:id="colnbj" prefWidth="108.0" text="Nombre de jours" />
+                              <TableColumn fx:id="colpri" prefWidth="71.0" text="Prix" />
+                              <TableColumn fx:id="coldate" minWidth="0.0" prefWidth="100.0" text="Date de l'inscription" />
+                              <TableColumn fx:id="colid" prefWidth="48.0" text="id" />
+                              <TableColumn fx:id="colnomenf" prefWidth="165.0" text="nom enfant" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="tnomenf" layoutX="32.0" layoutY="328.0" visible="false" />
+                        <TableView fx:id="tabenfant" layoutX="479.0" layoutY="107.0" onMouseClicked="#remplirnomenfant" prefHeight="200.0" prefWidth="385.0" stylesheets="@../styling/table2.css">
+                           <columns>
+                              <TableColumn fx:id="coli" prefWidth="75.0" text="idenfant" visible="false" />
+                              <TableColumn fx:id="coln" prefWidth="148.0" text="nom " />
+                              <TableColumn fx:id="colp" prefWidth="115.0" text="prenom" />
+                              <TableColumn fx:id="cola" prefWidth="121.0" text="age" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="tnomenf" editable="false" layoutX="271.0" layoutY="116.0" />
+                        <TextField fx:id="idenf" layoutX="77.0" layoutY="68.0" visible="false" />
+                        <Label layoutX="97.0" layoutY="60.0" text="Veuillez selectionner l'enfant à inscrire :" textFill="#f23580">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tabinsc1" layoutX="14.0" layoutY="374.0" onMouseClicked="#remplirleschamps" prefHeight="145.0" prefWidth="1003.0" stylesheets="@../styling/table2.css">
+                           <columns>
+                              <TableColumn fx:id="colnomenf1" prefWidth="140.99998474121094" text="Nom enfant" />
+                              <TableColumn fx:id="colenf1" prefWidth="124.0" text="Enfants" visible="false" />
+                              <TableColumn fx:id="colid1" prefWidth="48.0" text="id" visible="false" />
+                              <TableColumn fx:id="coldate1" minWidth="0.0" prefWidth="354.0" text="Date de l'inscription" />
+                              <TableColumn fx:id="colnbj1" prefWidth="271.0" text="Nombre de jours" />
+                              <TableColumn fx:id="colpri1" prefWidth="239.0" text="Prix" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="92.0" layoutY="345.0" text="Les inscriptions de votre enfant :" textFill="#f23580">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idtttt" layoutX="56.0" layoutY="30.0" visible="false" />
+                        <Button layoutX="609.0" layoutY="333.0" mnemonicParsing="false" onAction="#genererpdf" text="Charger un fichier PDF..." />
+                     </children>
+                  </Pane>
+               </children></VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

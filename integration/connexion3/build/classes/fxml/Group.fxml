@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="742.0" prefWidth="1271.0" style="-fx-background-color: #fff;" stylesheets="@table.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GroupController">
+   <children>
+      <Pane layoutX="-2.0" prefHeight="145.0" prefWidth="1257.0" styleClass="head-background" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="224.0" layoutY="47.0" text="Mini Miracles" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="227.0" layoutY="100.0" text="Interface admin" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="deconnecter" layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#deconnecter" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #EEA0A6;" text="Se déconnecter" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <stylesheets>
+            <URL value="@style.css" />
+            <URL value="@../styling/style.css" />
+         </stylesheets>
+      </Pane>
+      <VBox layoutY="145.0" prefHeight="596.0" prefWidth="255.0" style="-fx-background-color: #e8ffef;" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="145.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="252.0" textFill="#171717">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+            </Label>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Acceuil" textFill="#5b5858">
+               <font>
+                  <Font name="Ebrima" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleText="Project List" fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/acceuil.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="activite" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#activite" prefHeight="43.0" prefWidth="252.0" ripplerFill="#6847d3" text="Activités" textFill="#5b5858">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="Ebrima" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleText="Project List" fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/activité.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="cantine" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#cantine" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Cantine" textFill="#5b5858">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cantine.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="evenement" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#evenement" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Evènements" textFill="#5b5858">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/evenement.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="planning" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#planning" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Planning" textFill="#5b5858">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleText="Project List" fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/planning.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="utilisateur" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#utilisateur" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Les utilisateurs" textFill="#5b5858">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/users.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="forum" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#forum" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Forum" textFill="#f8818b">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/forum.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="kids" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#kids_list" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Liste des enfants" textFill="#5b5858">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/kids.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Pane layoutX="71.0" layoutY="44.0" prefHeight="131.0" prefWidth="142.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="303.0" layoutX="-64.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/mini_miracles.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </Pane>
+      <ScrollPane layoutX="251.0" layoutY="182.0" prefHeight="555.0" prefWidth="1019.0" style="-fx-background-color: #e8ffef;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="182.0">
+         <content>
+            <HBox prefHeight="552.0" prefWidth="1017.0">
+               <children>
+                  <VBox prefHeight="552.0" prefWidth="739.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <TableView fx:id="tablekid" onMouseClicked="#SearchKid" prefHeight="489.0" prefWidth="674.0" stylesheets="@../styling/table.css">
+                          <columns>
+                            <TableColumn fx:id="nom" prefWidth="150.0" text="Nom" />
+                              <TableColumn fx:id="prenom" minWidth="0.0" prefWidth="150.0" text="Prénom" />
+                              <TableColumn fx:id="datenaiss" prefWidth="180.0" text="Date de naissance" />
+                              <TableColumn fx:id="sexe" prefWidth="134.0" text="sexe" />
+                          </columns>
+                        </TableView>
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="58.0" prefWidth="674.0" spacing="20.0">
+                           <children>
+                              <JFXButton fx:id="returnbtng" buttonType="RAISED" onAction="#returnbackg" prefHeight="50.0" prefWidth="130.0" ripplerFill="#f2f2f2" style="-fx-background-color: #EEA0A6;" text="Retour" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="printbtn" buttonType="RAISED" onAction="#printg" prefHeight="50.0" prefWidth="130.0" ripplerFill="WHITE" style="-fx-background-color: #EEA0A6;" text="Version pdf" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="552.0" prefWidth="500.0" spacing="30.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <TableView fx:id="grouptable" onMouseClicked="#Search" prefHeight="345.0" prefWidth="383.0" stylesheets="@../styling/table.css">
+                          <columns>
+                            <TableColumn fx:id="nomg" prefWidth="371.0" text="Groupes" />
+                              <TableColumn fx:id="idgrp" prefWidth="17.0" text="id" visible="false" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TableView>
+                        <JFXTextField fx:id="nomgroup" focusColor="#f8818b" labelFloat="true" prefHeight="46.0" prefWidth="343.0" promptText="Entrer le nom du group">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton fx:id="btnajouter" buttonType="RAISED" onAction="#AjouterGroup" prefHeight="43.0" prefWidth="106.0" ripplerFill="#fffefe" style="-fx-background-color: #EEA0A6;" text="Ajouter" textFill="#fffbfb">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton fx:id="Supprimerbtn" buttonType="RAISED" onAction="#SupprimerGroup" prefHeight="41.0" prefWidth="99.0" style="-fx-background-color: #EEA0A6;" text="Supprimer" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton fx:id="Modifybtn" buttonType="RAISED" onAction="#updategrp" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #EEA0A6;" text="Modifier" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER_LEFT" layoutX="252.0" layoutY="145.0" prefHeight="36.0" prefWidth="1019.0" spacing="20.0" style="-fx-background-color: #ffe3e5;" AnchorPane.leftAnchor="252.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="addkid" onAction="#updatekid" prefHeight="30.0" prefWidth="171.0" style="-fx-background-color: f8818b;" text="Ajouter enfant a un groupe" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></JFXButton>
+            <JFXButton fx:id="modifkids" onAction="#modifaction" prefHeight="30.0" prefWidth="159.0" style="-fx-background-color: f8818b;" text="Afficher tous les enfants" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="affichekid" onAction="#afficherkidsansgrp" prefHeight="32.0" prefWidth="208.0" style="-fx-background-color: f8818b;" text="Afficher les enfants sans groupe" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="idgroup" prefHeight="25.0" prefWidth="55.0" visible="false" />
+            <TextField fx:id="nomkid" prefHeight="25.0" prefWidth="56.0" visible="false" />
+            <TextField fx:id="prenomkid" prefHeight="25.0" prefWidth="83.0" visible="false" />
+         </children></HBox>
+   </children>
+</AnchorPane>
