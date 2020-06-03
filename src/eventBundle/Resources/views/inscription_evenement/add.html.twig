@@ -1,0 +1,24 @@
+
+{% extends 'base.html.twig' %}
+
+
+
+
+{% block body %}
+
+    <div class="jumbotron text-center">
+        <center>
+            <h2>Ajouter inscription</h2>
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            {{ form_start(form) }}
+            <input type="submit" value="ajouter">
+            {{ form_end(form) }}
+        </center>
+
+
+    </div>
+{% endblock %}

@@ -1,0 +1,160 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'les etudiant' %}
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1>   <label  for="topicOptions" style="font-size: 28px; color: #5bc0de;" class="ng-binding" >Gestion des événements </label> </h1>
+
+    </div>
+    <div class="jumbotron text-center">
+        <div class="container">
+
+
+            </div>
+            <form method="POST" >
+
+
+
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control" placeholder="Taper le nom">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-primary
+                       btn-flat" ><i class="fa fa-search"></i></button>
+                    </span>
+
+
+                </div>
+
+
+
+            </form>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                var searchRequest = null;
+                $("#search").keyup(function() {
+                    var minlength = 1;
+                    var that = this;
+                    var value = $(this).val();
+                    var entitySelector = $("#entitiesNav").html('');
+                    if (value.length >= minlength ) {
+                        if (searchRequest != null)
+                            searchRequest.abort();
+                        searchRequest = $.ajax({
+                            type: "GET",
+                            url: "{{ path('search') }}",
+                            data: {
+                                'q' : value
+                            },
+                            dataType: "text",
+                            success: function(msg){
+                                //we need to check if the value is the same
+                                if (value===$(that).val()) {
+                                    var result = JSON.parse(msg);
+                                    $.each(result, function(key, arr) {
+                                        $.each(arr, function(id, value) {
+                                            if (key === 'evenement') {
+                                                if (id !== 'error') {
+                                                    console.log(value[1]);
+                                                    entitySelector.append('<li><b>'+value[0]+'</b><</li>');
+                                                } else {
+                                                    entitySelector.append('<li class="errorLi">'+value+'</li>');
+                                                }
+                                            }
+                                        });
+                                    });
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+
+
+
+            <br><br>
+    <h2><label  for="topicOptions" style="font-size: 20px; color: #5bc0de;" class="ng-binding" >caracteristiques </label></h2>
+
+    <TABLE class="table table-striped" >
+        <tr> <th > <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Lieu</label></th>
+            <th> <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Nom</label></th>
+            <th> <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Prix</label></th>
+            <th><label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Nb_places</label> </th>
+            <th> <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Date</label> </th>
+            <th> <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Actions</label> </th></tr>
+
+                {% for e in evenements %}
+
+
+                                                    <tr>
+                                                        <td>  <i class="fa fa-child"></i> {{ e.lieu }}</td>
+                                                        <td>  {{ e.nom }}</td>
+                                                        <td>  {{ e.prix | number_format(0,'',' ')}}</td>
+                                                        <td>  {{ e.nbPlaces }}</td>
+                                                        <td>  {{ e.dateEvent|date("F - d - Y") }}</td>
+                                                        <td>  <a href="{{ path('evenement_supprimer',{'id':e.id}) }}" class="btn btn-primary"><i class="fa fa-trash-o"></i> <br> Supprimer</a>
+
+
+
+                                                            <form action="{{ path('evenement_modifier',{'id':e.id}) }}" style="display: inline-block" onsubmit="return confirm('Etes vous vraiment sur?')">
+                                                                <input type="hidden" name="method" value="modifier">
+
+                                                                <button class="btn btn-primary" ><i class="fa fa-edit"></i> <br> Modifier</button>
+
+
+
+                                                            </form>
+                                                            <form action="{{ path('evenement_inscriAdd',{'id':e.id}) }}" style="display: inline-block" onsubmit="return confirm('Etes vous vraiment sur?')">
+                                                            <input type="hidden" name="method" value="show">
+                                                            <button class="btn btn-primary"><i class="fa fa-eye"></i> <br> voir</button>
+
+
+                                                            </form>
+
+
+                                                        </td>
+
+
+                                                    </tr>
+                         {% endfor %}
+                                                </TABLE>
+        <div class="pull-left">
+           
+            <div class="pages">
+                <ul class="pagination">
+                    <li class="prev disabled">
+<span>
+<i class="fa fa-caret-left">
+</i>
+</span>
+                    </li>
+                    <li class="active"><a href="/fr/occasion/1?keyword=mazda+6" data-page="0">1</a></li>
+                    <li><a href="/fr/occasion/2?keyword=mazda+6" data-page="1">2</a></li>
+                    <li class="next">
+                        <a href="/fr/occasion/2?keyword=mazda+6" data-page="1">
+                            <i class="fa fa-caret-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.btn-group -->
+        </div>
+        <br>
+
+        <div class="text-right">
+
+            <a href="{{ path('event_ajouter') }}" class="btn btn-primary">  <i class="fa fa-save"> <br> Ajouter</i></a>
+        </div>
+
+
+
+                                        </div>
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'les etudiant' %}
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1>   Gestion des événements  </h1>
+
+    </div>
+    <div class="jumbotron text-center">
+        <div class="container">
+            <form method="post" >
+                <label>Nom : </label><input type="text" placeholder="taper le nom" name="titre">
+                <input type="submit" value="chercher" name="chercher"  class="btn btn-primary">
+
+            </form>
+            <br><br>
+            <h2>caracteristiques</h2>
+
+            <TABLE class="table table-striped">
+                <tr> <th> Lieu</th> <th> Nom</th> <th> Prix</th> <th> Nb_places</th> <th> Date</th> <th> Actions</th></tr>
+
+                {% for e in evenements %}
+
+
+                    <tr>
+                        <td>  {{ e.lieu }}</td>
+                        <td>  {{ e.nom }}</td>
+                        <td>  {{ e.prix }}</td>
+                        <td>  {{ e.nbPlaces }}</td>
+                        <td>  {{ e.dateEvent|date("F - d - Y") }}</td>
+                        <td>  <a href="{{ path('evenement_supprimer',{'id':e.id}) }}" class="btn btn-primary">Supprimer</a>
+
+                            <form action="{{ path('evenement_modifier',{'id':e.id}) }}" style="display: inline-block" onsubmit="return confirm('Etes vous vraiment sur?')">
+                                <input type="hidden" name="method" value="modifier">
+                                <button class="btn btn-primary">Modifier</button>
+
+                            </form>
+
+                        </td>
+
+
+                    </tr>
+                {% endfor %}
+            </TABLE>
+        </div>
+
+
+    </div>
+
+
+
+
+{% endblock %}

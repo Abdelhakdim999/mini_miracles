@@ -1,0 +1,52 @@
+event_homepage:
+    path:     /
+    defaults: { _controller: eventBundle:Default:index }
+event_ajouter:
+    path:     /ajouter
+    defaults: { _controller: eventBundle:evenement:ajoutEvenement }
+evenement_read:
+    path:     /read
+    defaults: { _controller: eventBundle:evenement:read }
+evenement_supprimer:
+    path:     /supprimer/{id}
+    defaults: { _controller: eventBundle:evenement:delete }
+evenement_modifier:
+    path:     /mofifier/{id}
+    defaults: { _controller: eventBundle:evenement:update }
+evenement_chercher:
+    path:     /chercher
+    defaults: { _controller: eventBundle:evenement:search }
+search:
+    path:     /chercher
+    defaults: { _controller: eventBundle:evenement:searchFronnt }
+evenement_readOne:
+    path:     /readOne/{id}
+    defaults: { _controller: eventBundle:evenement:readOne }
+evenement_readFront:
+    path:     /readFront
+    defaults: { _controller: eventBundle:evenement:readFront }
+evenement_inscriAdd:
+    path:     /inscriAdd/{id}
+    defaults: { _controller: eventBundle:evenement:inscriAdd }
+evenement_affichFront:
+    path:     /affichFront/{id}
+    defaults: { _controller: eventBundle:evenement:affichFront }
+evenement_addEnfant:
+    path:     /addEnfant
+    defaults: { _controller: eventBundle:enfant:add }
+evenement_readEnfant:
+    path:     /readEnfant
+    defaults: { _controller: eventBundle:enfant:readEnfant }
+inscription_add:
+    path:     /inscription/add
+    defaults: { _controller: eventBundle:inscription_evenement:add }
+inscription_read:
+    path:     /inscription/read
+    defaults: { _controller: eventBundle:inscription_evenement:read }
+evenement_chercherFront:
+    path:     /chercherFront
+    defaults: { _controller: eventBundle:evenement:searchFront }
+evenement_readEnfantEvent:
+    path:     /readEnfantEvent
+    defaults: { _controller: eventBundle:evenement:readEnfant }
+

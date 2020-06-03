@@ -1,0 +1,164 @@
+
+{% extends 'base.html.twig' %}
+{% block title 'Les événements' %}
+{% block body %}
+    <div class="jumbotron text-center">
+        <h2><label  for="topicOptions" style="font-size: 28px; color: #5bc0de;" class="ng-binding" >Les événements disponibles </label> </h2>
+
+
+
+            <div class="input-group input-group-sm">
+                <input type="text" class="form-control" placeholder="Taper le nom">
+                <span class="input-group-btn">
+                      <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                    </span>
+            </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                var searchRequest = null;
+                $("#search").keyup(function() {
+                    var minlength = 1;
+                    var that = this;
+                    var value = $(this).val();
+                    var entitySelector = $("#entitiesNav").html('');
+                    if (value.length >= minlength ) {
+                        if (searchRequest != null)
+                            searchRequest.abort();
+                        searchRequest = $.ajax({
+                            type: "GET",
+                            url: "{{ path('search') }}",
+                            data: {
+                                'q' : value
+                            },
+                            dataType: "text",
+                            success: function(msg){
+                                //we need to check if the value is the same
+                                if (value===$(that).val()) {
+                                    var result = JSON.parse(msg);
+                                    $.each(result, function(key, arr) {
+                                        $.each(arr, function(id, value) {
+                                            if (key === 'evenement') {
+                                                if (id !== 'error') {
+                                                    console.log(value[1]);
+                                                    entitySelector.append('<li><b>'+value[0]+'</b><</li>');
+                                                } else {
+                                                    entitySelector.append('<li class="errorLi">'+value+'</li>');
+                                                }
+                                            }
+                                        });
+                                    });
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+
+
+
+        <br><br>
+
+    </div>
+
+        <div class="container mt-4">
+
+
+            <div class="row">
+                {% for e in evenements %}
+                    <div class="events-slide col-lg-4 col-sm-4 col-xs-12" style="display: block;">
+                        <div class="events" >
+                            <div class="events-img">
+
+
+                                <div class="info-box">
+                                    <span class="info-box-icon bg-aqua"><i class="fa fa-child"></i></span>
+
+                                    <div class="info-box-content">
+
+
+
+                                        <h4>
+                                            <a href="{{ path('evenement_affichFront',{'id':e.id}) }}">
+                                                {{ e.nom }}
+                                            </a>
+                                        </h4>
+                                        <div class="date">
+
+
+
+                                            <div class="date-box pull-left">
+
+                                                <label  for="topicOptions" style="font-size: 18px;" class="ng-binding" >  {{ e.dateEvent|date("F - d - Y") }}</label>
+
+                                            </div>
+                                            <br>
+                                            <br>
+
+                                            <label  for="topicOptions" style="font-size: 14px;" class="ng-binding" > {{ e.lieu }}</label>
+
+                                            <p class="multi-eli">
+                                                {{ e.nbPlaces }} places disponibles
+                                            </p>
+
+                                        </div>
+
+
+
+
+                                    <div class="events-content">
+
+
+
+                                        <label  for="topicOptions" style="font-size: 20px; color: #5bc0de;" class="ng-binding" > <span class="info-box-number">{{ e.prix | number_format(0,'',' ')}} Dt</span> </label>
+
+                                            <br>
+
+
+                                            <br>
+                                            <br>
+
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <!-- /.info-box-content -->
+                                </div>
+
+                        </div>
+                    </div>
+
+
+            {% endfor %}
+
+        </div>
+
+        </div>
+
+    <div class="pull-left">
+        <div class="pages">
+            <ul class="pagination">
+                <li class="prev disabled">
+<span>
+<i class="fa fa-caret-left">
+</i>
+</span>
+                </li>
+                <li class="active"><a href="#" data-page="0">1</a></li>
+                <li><a href="#" data-page="1">2</a></li>
+                <li class="next">
+                    <a href="#" data-page="1">
+                        <i class="fa fa-caret-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
+

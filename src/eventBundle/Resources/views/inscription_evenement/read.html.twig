@@ -1,0 +1,60 @@
+
+
+{% extends 'base.html.twig' %}
+{% block title 'Les inscriptions' %}
+{% block body %}
+    <div class="jumbotron text-center">
+        <h2><label  for="topicOptions" style="font-size: 28px; color: #5bc0de;" class="ng-binding" >vos inscriptions </label> </h2>
+
+
+    </div>
+
+    <div class="container mt-4">
+
+
+        <div class="row">
+            {% for e in inscriptions %}
+                <div class="events-slide col-lg-4 col-sm-4 col-xs-12" style="display: block;">
+                    <div class="events" >
+                        <div class="events-img">
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="info-box bg-aqua">
+                                    <span class="info-box-icon"><i class="fa fa-bookmark-o"></i></span>
+
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Inscription</span>
+                                        <span class="info-box-number">{{ e.prix | number_format(0,'',' ')}} Dt</span>
+
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 70%"></div>
+                                        </div>
+                                        <span class="progress-description">
+                    Evénement {{ e.evenement.nom }} pour {{ e.enfant.nom}}
+<br>
+{{ e.dateInsc|date("F - d - Y")}}
+                  </span>
+                                    </div>
+                                    <!-- /.info-box-content -->
+                                </div>
+                                <!-- /.info-box -->
+                            </div>
+
+                    </div>
+                </div>
+
+
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+{% endblock %}
+
