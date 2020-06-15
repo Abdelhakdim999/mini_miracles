@@ -1,0 +1,104 @@
+
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="jumbotron text-center">
+        <h2><label  for="topicOptions" style="font-size: 28px; color: #5bc0de;" class="ng-binding" >caracteristiques </label></h2>
+
+    </div>
+    <div class="jumbotron text-center">
+        <div class="container">
+
+
+            <center>
+
+
+
+
+                <fieldset style="width: 30%;margin: auto;">
+                    <TABLE class="table table-striped">
+
+                        <tr><td>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none">
+                                    <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f;" class="ng-binding" >Lieu <i class="fa  fa-globe"></i></label>
+
+                                    {{ inscription_evenement.id_event.nom}}<br><br>
+
+                                </div>
+                            </td></tr>
+
+                        <tr><td>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none">
+                                    <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f;" class="ng-binding" >Nom  <i class="fa  fa-child"></i></label>
+
+                                    {{ inscription_evenement.id_enfant.nom}}<br><br>
+                                    {{ inscription_evenement.id_enfant.prenom}}<br><br>
+                                </div>
+                            </td></tr>
+
+                        <tr><td>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none">
+                                    <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f;" class="ng-binding" >Prix <i class="fa  fa-credit-card"></i></label>
+                                    <br>
+
+                                    {{inscription_evenement.prix| number_format(0,'',' ') }}<br><br>
+                                </div>
+                            </td></tr>
+
+
+
+                        <tr><td>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none">
+                                    <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f;" class="ng-binding" >Date  <i class="fa fa-calendar"></i></label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <br>
+                                            {{ inscription_evenement.dateInsc|date("F - d - Y")  }}<br><br>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </td></tr>
+
+
+
+
+
+
+                    </TABLE>
+                </fieldset>
+
+            </center>
+
+
+        </div>
+
+
+        <div class="text-center">
+
+            <a  class="btn btn-app" href="{{ path('inscription_read') }}"><i class="fa fa-align-left"></i>Retour a la liste</a>
+
+
+            <a class="btn btn-app" href="{{ path('inscription_event_pdf', { 'id': inscription_evenement.idInsc }) }}">
+                <i class="fa fa-edit"></i> pdf
+            </a>
+
+            <a class="btn btn-app" href="{{ path('inscription_event_delete',{'id':inscription_evenement.idInsc}) }}">
+                <i class="fa fa-trash"></i> Supprimer
+            </a>
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+{% endblock %}
+

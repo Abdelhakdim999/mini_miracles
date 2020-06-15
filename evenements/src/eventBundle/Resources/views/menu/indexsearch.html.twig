@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+
+
+
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">La liste des Menus</h3>
+    </div>
+    <div class="input-group custom-search-form">
+
+        <input type="text" id="entre" class="form-control" placeholder="Search here">
+        <input type="submit" value="entre" >
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="example1_length"></div></div><div class="col-sm-6"><div id="example1_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="example1"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                        <thead>
+                        <tr role="row"><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="entre: activate to sort column ascending" style="width: 120px;">entre</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="plat: activate to sort column ascending" style="width: 120px;">plat</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="dessert: activate to sort column ascending" style="width: 120px;">dessert</th><th scope="col" role="columnheader" class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="date: activate to sort column ascending" style="width: 120px;">date</th><th>Action</th></tr>
+                        </thead>
+                        <tbody>
+                        <form method="get">
+                            <label>entre :</label><input type="text" name="entre">
+                            <input type="submit" value="entre" >
+                        </form>
+
+                        <a class="btn btn-app"  href="{{ path('menu_new') }}">
+                            <i class="fa fa-save"></i> Ajouter
+                        </a>
+
+                        {% for menu in menus %}
+                            <tr>
+
+                                <td>{{ menu.entre }}</td>
+                                <td>{{ menu.plat }}</td>
+                                <td>{{ menu.dessert }}</td>
+                                <td>{% if menu.date %}{{ menu.date|date('Y-m-d') }}{% endif %}</td>
+                                <td>
+                                    <ul>
+
+                                        <a class="btn btn-app" href="{{ path('menu_show', { 'id': menu.id }) }}">
+                                            <i class="fa fa-eye"></i> Aperçu
+                                        </a>
+
+
+
+                                        <a class="btn btn-app" href="{{ path('menu_edit', { 'id': menu.id }) }}">
+                                            <i class="fa fa-edit"></i> Modifier
+                                        </a>
+
+
+
+
+
+                                        <a class="btn btn-app" href="{{ path('menu_delete2',{'id':menu.id}) }}">
+                                            <i class="fa fa-close"></i> Supprimer
+                                        </a>
+
+
+
+
+
+
+
+
+                                    </ul>
+                                </td>
+                            </tr>
+                        {% endfor %}
+
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table></div></div>
+
+            <ul>
+
+            </ul>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    {% endblock %}

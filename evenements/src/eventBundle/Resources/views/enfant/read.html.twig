@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'les etudiant' %}
+{% block body %}
+    <div class="jumbotron text-center">
+
+
+    </div>
+    <div class="jumbotron text-center">
+        <div class="container">
+
+
+            <TABLE class="table table-striped">
+                <tr> <th> Nom</th> <th> Prenom</th> <th> DateNaiss</th> <th> Sexe</th> <th> Parent</th> </tr>
+
+                {% for e in enfants %}
+
+
+                    <tr>
+                        <td>  {{ e.nom }}</td>
+                        <td>  {{ e.prenom }}</td>
+                        <td>  {{ e.dateNaiss |date("F - d - Y")}}</td>
+                        <td>  {{ e.sexe }}</td>
+                        <td>  {{ e.parent.idParent}}</td>
+
+
+
+
+                    </tr>
+                {% endfor %}
+            </TABLE>
+        </div>
+
+
+
+    </div>
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+
+
+
+
+
+
+
+
+    <div class="box box-warning">
+        <a class="box-header with-border">
+            <h3 class="box-title">Inscription à la cantine</h3>
+
+
+            {{ form_start(form) }}
+            <br>
+            <br>
+       <h3>     <label>Nombre de jours</label> </h3><br>
+            <input type="text" class="form-control" id="nbj"  style="width: 40%; onkeypress="setprix()";  placeholder="Nombre de jour"
+            {{ form_widget(form.nbrjour) }}<br><br>
+
+
+
+        <h3>   <label id="cc">Prix en Dinars :  </label></h3>
+            <br>
+           <h4> <label id="prixx"></label><br></h4>
+<br>
+            <input type="hidden" class="form-control" id="prix" style="width: 40%; placeholder="Prix"
+            {{ form_widget(form.prix) }}
+        <h3>    <label>Date de debut</label></h3><br>
+
+            {{ form_widget(form.dateInsc) }}<br><br>
+         <h3>   <label>Prenom de l'enfant</label><br></h3>
+
+
+            <select class="form-control select2 select2-hidden-accessible" style="width: 40%;"  tabindex="-1" aria-hidden="true"
+
+                    {{ form_widget(form.idEnf) }}
+
+            </select>
+
+
+
+
+
+<br>
+            <label style="width: 40%;display:none;">Cantine</label><br>
+
+            <select class="form-control select2 select2-hidden-accessible" style="width: 40%;display:none;" tabindex="-1" aria-hidden="true" default="1" visible="false"
+                {{ form_widget(form.idCant) }}
+            </select>
+            <br><br>
+
+
+            <input  class="btn btn-app" type="submit" value="Ajouter" />
+
+            {{ form_end(form) }}
+
+
+
+            <a  class="btn btn-app" href="{{ path('inscription_cantine_index') }}"><i class="fa fa-align-left"></i>Retour a la liste des menus</a>
+
+
+    </div>
+    </div>
+
+    <!-- /.box-body -->
+    </div>
+
+    <script>
+        nbj.onchange = function() {
+       var x =document.getElementById("nbj").value;
+        document.getElementById("prix").value = x*2;
+            document.getElementById("prixx").innerHTML = x*2 +" DT";}
+    </script>
+{% endblock %}

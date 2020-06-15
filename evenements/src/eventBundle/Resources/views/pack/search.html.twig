@@ -1,0 +1,59 @@
+
+<div class="jumbotron text-center">
+    <h1>   Gestion des packs  </h1>
+
+</div>
+<div class="jumbotron text-center">
+    <div class="container">
+
+        <br><br>
+
+        <TABLE class="table table-striped" >
+            <tr> <th > <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Titre</label></th>
+                <th> <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Description</label></th>
+                <th> <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Image</label></th>
+
+                <th> <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Actions</label> </th></tr>
+
+            {% for pack in packs %}
+                <tr>
+
+                    <td>  {{ pack.titre }}</td>
+                    <td>  {{ pack.description }}</td>
+                    <td><img src="{{ asset('bundles/images/' ~ pack.image) }}" alt="vide" width="100px"></td>
+
+
+
+
+                    <td>  <a href="{{ path('pack_delete',{'id':pack.id}) }}" class="btn btn-primary"><i class="fa fa-trash"></i> </a>
+
+
+
+                        <form action="{{ path('pack_edit', { 'id': pack.id }) }}" style="display: inline-block" onsubmit="return confirm('Etes vous vraiment sur?')">
+                            <input type="hidden" name="method" value="modifier">
+
+                            <button class="btn btn-primary" ><i class="fa fa-edit"></i> </button>
+
+
+
+                        </form>
+                        <form action="{{ path('pack_show', { 'id': pack.id }) }}" style="display: inline-block" onsubmit="return confirm('Etes vous vraiment sur?')">
+                            <input type="hidden" name="method" value="show">
+                            <button class="btn btn-primary"><i class="fa fa-eye"></i> </button>
+
+
+                        </form>
+
+
+
+
+                    </td>
+
+
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+
+</div>

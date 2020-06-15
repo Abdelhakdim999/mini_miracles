@@ -1,0 +1,150 @@
+
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="jumbotron text-center">
+
+
+    </div>
+    <div class="jumbotron text-center">
+        <div class="container">
+
+
+            <center>
+                <h2>Ajouter une inscription</h2>
+                <div hidden>
+               
+                {{ form_start(form)  }}
+                </div>
+                <fieldset style="width: 30%;margin: auto;">
+                    <TABLE class="table table-striped">
+
+
+                        <tr><td>
+
+
+
+
+
+
+
+
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none">
+                                    <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f; " class="ng-binding" > Prix  <i class="fa fa-credit-card"></i></label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+
+
+                                            {{ prix| number_format(0,'',' ')}} Dt
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                            </td></tr>
+
+                        <tr><td>
+
+
+
+
+
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none">
+                                    <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f;" class="ng-binding" > Date  <i class="fa fa-calendar"></i></label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+
+
+                                             {{ "now"|date("m/d/Y") }}
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                            </td></tr>
+                        <tr><td>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none">
+                            <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f; " class="ng-binding" > Evenement  <i class="fa fa-child"></i></label>
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+
+
+                                    {{ nom }}
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                        </td></tr>
+
+                        <tr><td>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none">
+                                    <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f;" class="ng-binding" > Enfant  <i class="fa fa-child"></i></label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+
+
+                                           {{ form_widget(form.id_enfant) }}
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                            </td></tr>
+
+
+
+
+
+
+
+                        <tr><td colspan="2" align="center">
+
+
+                                <div class="text-center">
+
+                                    <a href="{{ path('evenement_readFront') }}" class="btn btn-primary">  Retour </a>
+                                    <input type="submit" value="valider" class="btn btn-primary" >
+
+
+
+
+
+                                </div>
+
+                            </td></tr>
+                            </td></tr>
+
+
+                    </TABLE>
+                </fieldset>
+                <div hidden>
+
+                {{ form_end(form) }}
+
+                </div>
+
+            </center>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Menu edit</h1>
+
+
+
+    {{ form_start(edit_form) }}
+    <label>Entre</label><br>
+    <input type="text" class="form-control" id="exampleInputEmail1" style="width: 40%; placeholder="Entre"
+    {{ form_widget(edit_form.entre) }}<br><br>
+    <label>Plat</label><br>
+    <input type="text" class="form-control" id="exampleInputEmail1" style="width: 40%; placeholder="Plat"
+    {{ form_widget(edit_form.plat) }}<br><br>
+    <label>Dessert</label><br>
+    <input type="text" class="form-control" id="exampleInputEmail1" style="width: 40%; placeholder="Dessert"
+    {{ form_widget(edit_form.dessert) }}<br><br>
+    <label>Date</label><br>
+    Date: {{ form_widget(edit_form.date) }}<br><br>
+    <input class="btn btn-app" type="submit" value="Modifier" />
+
+    {{ form_end(edit_form) }}
+
+
+
+
+
+
+
+        <a  class="btn btn-app" href="{{ path('menu_index') }}"><i class="fa fa-align-left"></i>Retour a la liste des menus</a>
+
+        <a class="btn btn-app" href="{{ path('menu_delete2',{'id':menu.id}) }}">
+            <i class="fa fa-trash"></i>
+        </a>
+
+
+{% endblock %}

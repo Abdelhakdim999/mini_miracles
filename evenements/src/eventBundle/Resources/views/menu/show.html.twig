@@ -1,0 +1,96 @@
+
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="jumbotron text-center">
+        <h2><label  for="topicOptions" style="font-size: 28px; color: #5bc0de;" class="ng-binding" >Menu </label></h2>
+
+    </div>
+    <div class="jumbotron text-center">
+        <div class="container">
+
+
+            <center>
+
+
+
+
+                <fieldset style="width: 30%;margin: auto;">
+                    <TABLE class="table table-striped">
+                        <tr><td>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none;width: 200px;" >
+                                    <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f;" class="ng-binding" >Date du menu
+                                        <i class="fa fa-calendar"></i></label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <br>
+                                            {% if menu.date %}{{ menu.date|date('Y-m-d') }}{% endif %}<br><br>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </td></tr>
+                        <tr><td>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none">
+                                    <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f;" class="ng-binding" >Entre </label>
+
+                                    {{ menu.entre }}<br><br>
+
+                                </div>
+                            </td></tr>
+
+                        <tr><td>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none">
+                                    <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f;" class="ng-binding" >Plat </label>
+
+                                    {{ menu.plat }}<br><br>
+                                </div>
+                            </td></tr>
+
+                        <tr><td>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none">
+                                    <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f;" class="ng-binding" >Dessert </label>
+                                    <br>
+
+                                    {{ menu.dessert }}<br><br>
+                                </div>
+                            </td></tr>
+
+
+
+
+
+
+
+
+                    </TABLE>
+                </fieldset>
+
+            </center>
+
+
+        </div>
+        <div class="text-center">
+
+            <a  class="btn btn-app" href="{{ path('menu_index') }}"><i class="fa fa-align-left"></i>Retour a la liste</a>
+
+            <a class="btn btn-app" href="{{ path('menu_edit', { 'id': menu.id }) }}">
+                <i class="fa fa-edit"></i> Modifier
+            </a>
+
+
+
+            <a class="btn btn-app" href="{{ path('menu_delete2',{'id':menu.id}) }}">
+                <i class="fa fa-trash"></i>
+            </a>
+        </div>
+
+
+    </div>
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,26 @@
+
+<TABLE class="table table-striped" >
+    <tr> <th > <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >L'enfant inscrit</label></th>
+        <th> <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Titre du pack</label></th>
+        <th> <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Date d'inscription</label></th>
+
+        <th> <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Actions</label> </th></tr>
+
+    {% for inscription_pack in inscription_packs %}
+        <tr>
+
+
+            <td>{{ inscription_pack.idEnfant.nom }} {{ inscription_pack.idEnfant.prenom }}</td>
+            <td>{{ inscription_pack.idPack.titre }}</td>
+            <td>{% if inscription_pack.dateInsc %}{{ inscription_pack.dateInsc|date('Y-m-d') }}{% endif %}</td>
+
+            <td>
+                <ul>
+
+
+
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+</table>

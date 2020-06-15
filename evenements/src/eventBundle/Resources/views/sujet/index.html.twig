@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>La liste des sujets</h1>
+
+    <table>
+        <thead>
+        <li>
+            <a class="btn btn-app"  href="{{ path('sujet_new') }}">
+                <i class="fa fa-save"></i> Ajouter un sujet
+            </a>
+        </li>
+        </thead>
+
+
+        <div class="input-group input-group-sm">
+            <input type="text" id="search" class="form-control" placeholder="Taper la date ">
+            <span class="input-group-btn">
+                      <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                    </span>
+        </div>
+        <ul class="nav nav-second-level" id="entitiesNav">
+        </ul>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                var searchRequest = null;
+                $("#search").keyup(function() {
+                    var minlength = 1;
+                    var that = this;
+                    var value = $(this).val();
+                    var entitySelector = $("#entitiesNav").html('');
+                    if (value.length >= minlength ) {
+                        if (searchRequest != null)
+                            searchRequest.abort();
+                        searchRequest = $.ajax({
+                            type: "GET",
+                            url: "{{ path('sujet_search') }}",
+                            data: {
+                                'q' : value
+                            },
+                            dataType: "text",
+                            success: function(msg){
+                                //we need to check if the value is the same
+                                if (value===$(that).val()) {
+                                    var result = JSON.parse(msg);
+                                    $.each(result, function(key, arr) {
+                                        $.each(arr, function(id, value) {
+                                            if (key === 'sujet') {
+                                                if (id !== 'error') {
+                                                    console.log(value);
+                                                    entitySelector.append('<li><a href="/event/sujet/'+id+'/show">'+value[0]+'<a/></li>');
+                                                } else {
+                                                    entitySelector.append('<li class="errorLi">'+value+'</li>');
+                                                }
+
+                                            }
+                                        });
+                                    });
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+
+        <br><br>
+        <tbody>
+        {% for sujet in sujets %}
+            <tr border="1">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-yellow elevation-1"><i class="fa fa-comments"></i></span>
+
+                    <div class="info-box-content" class="jumbotron text-center">
+                <span class="info-box-text">
+                    <div class="timeline-body">
+                        <a href="{{ path('sujet_readcomsujet',{'id':sujet.id}) }}">  {{ sujet.contenu }}</a>
+
+                        </div></span>
+                        <span class="info-box-number">{% if sujet.date %}{{ sujet.date|date('Y-m-d H:i:s') }}{% endif %}</span>
+                    </div>
+                    <div>
+
+
+                    <div class="timeline-footer" class="jumbotron text-center">
+                        <a class="btn btn-warning btn-flat btn-xs" href="{{ path('sujet_edit', { 'id': sujet.id }) }}">edit sujet</a>
+                    </div>
+
+                        <div class="timeline-footer" class="jumbotron text-center">
+                            <a class="btn btn-warning btn-flat btn-xs" href="{{ path('sujet_delete2',{'id':sujet.id}) }}">Supprimer sujet</a>
+                        </div>
+
+                    </div>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+
+    </ul>
+
+    <div class="navigation">
+        {{ knp_pagination_render(sujets) }}
+    </div>
+
+
+{% endblock %}

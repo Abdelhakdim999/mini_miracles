@@ -1,0 +1,37 @@
+user_homepage:
+  path:     /
+  defaults: { _controller: UserBundle:Default:index }
+
+
+user_admin:
+  path:     /access/admin
+  defaults: { _controller: UserBundle:Default:admin }
+
+
+user_parent:
+  path:     /access/parent
+  defaults: { _controller: UserBundle:Default:parent }
+
+user_Admin:
+    path:     /access/Admin
+    defaults: { _controller: UserBundle:Default:Admin }
+
+user_eleve:
+  path:     /access/eleve
+  defaults: { _controller: UserBundle:Default:eleve}
+
+
+user_staff:
+  path:     /access/staff
+  defaults: { _controller: UserBundle:Default:staff}
+
+
+home:
+  path:     /homepage
+  defaults: { _controller: UserBundle:Default:homepage }
+
+
+session:
+  path:     /home
+  defaults: { _controller: FOSUserBundle:Default:security }
+

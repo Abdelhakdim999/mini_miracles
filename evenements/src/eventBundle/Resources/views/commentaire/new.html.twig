@@ -1,0 +1,90 @@
+
+{% extends 'base2.html.twig' %}
+{% block body %}
+    <div class="jumbotron text-center">
+
+
+    </div>
+    <div class="jumbotron text-center">
+        <div class="container">
+
+
+            <center>
+                <h2>Ajouter un commentaire</h2>
+
+                <div hidden>
+
+                    {{ form_start(form)  }}
+                </div>
+
+
+                                    <section class="content">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card card-outline card-info">
+                                                    <div class="card-header">
+
+                                                        <!-- tools box -->
+                                                        <div class="card-tools">
+                                                            <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                                                <i class="fas fa-minus"></i></button>
+                                                            <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                                                                <i class="fas fa-times"></i></button>
+                                                        </div>
+                                                        <!-- /. tools -->
+                                                    </div>
+                                                    <!-- /.card-header -->
+
+
+
+                                              <p>{{ "now"|date("m/d/Y") }}</p>
+                                                 <p>{{ form_widget(form.idSujet) }}</p>
+                                                  <div hidden> {{ form_widget(form.idUser) }}  </div>
+
+                                                    {{ form_widget(form.contenu) }}
+
+                                                </div>
+                                                <!-- /.col-->
+                                            </div>
+                                        </div>
+                                            <!-- ./row -->
+                                    </section>
+
+
+                        <tr><td colspan="2" align="center">
+
+
+                                <div class="text-center">
+
+
+                                    <input type="submit" value="valider" class="btn btn-primary" >
+
+
+
+
+
+                                </div>
+
+                            </td></tr>
+
+                </fieldset>
+                <div hidden>
+
+                    {{ form_end(form) }}
+
+                </div>
+
+            </center>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+{% endblock %}
+

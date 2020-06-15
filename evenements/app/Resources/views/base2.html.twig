@@ -1,0 +1,190 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Informing Education Category Bootstrap Responsive Template | Home :: W3layouts</title>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+
+    </style>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Informing Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{{ asset ('bundles/css/bootstrap.css')}}">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{{ asset ('bundles/css/style.css')}}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{{ asset ('bundles/css/font-awesome.css')}}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+</head>
+
+<body>
+<!-- mian-content -->
+<div class="main-content" id="home">
+    <div class="layer">
+        <!-- header -->
+        <header>
+            <div class="container-fluid px-lg-5">
+
+                <!-- nav -->
+                <nav class="pt-4 d-lg-flex">
+                    <div id="logo">
+                        <h1> <a href="index.html">Mini Miracles</a></h1>
+                    </div>
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop" />
+                    <ul class="menu mt-2 ml-auto">
+                        <li class="active"><a href="index.html">Acceuil</a></li>
+                        <li><a href="#about" class="scroll">A propos</a></li>
+                        <li>
+                            <!-- First Tier Drop Down -->
+                            <label for="drop-2" class="toggle">Menu <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                            <a href="#">Menu <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2" />
+                            <ul class="inner-ul">
+                                <li><a class="scroll" href="{{ path('evenement_readFront') }}">Evènements</a></li>
+
+                                <li><a class="scroll" href="{{ path('inscription_readInscEnf') }}">Inscriptions événement</a></li>
+                                <li><a href="#services" class="scroll">Activités</a></li>
+                                <li><a href="{{ path('inscription_cantine_index') }}" class="scroll">Inscription à la cantine</a></li>
+                                <li><a href="{{ path('menu_index') }}" class="scroll">Menu Cantine</a></li>
+                                <li><a href="{{ path('pack_index_front') }}">Packs</a></li>
+                                <li><a href="{{ path('inscription_pack_showF') }}">Inscriptions Packs</a></li>
+                                <li><a href="#team" class="scroll">Planning</a></li>
+                                <li><a href="{{ path('sujet_index2') }}" class="scroll">Forum</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="#contact" class="scroll">Contact</a></li>
+
+                        <li><a href="{{ path('fos_user_security_logout') }}"><i class="fa fa-sign-out"></i> Déconnexion</a></li>
+
+                    </ul>
+                </nav>
+                <!-- //nav -->
+            </div>
+        </header>
+        <!-- //header -->
+    </div>
+</div>
+
+
+<!--//body -->
+
+<div class="content-wrapper" style="min-height: 530px;">
+{% block body %}
+
+
+
+
+{% endblock %}
+</div>
+
+
+
+
+
+<!-- footer -->
+<footer class="footer-content">
+    <div class="layer footer-1">
+        <div class="container-fluid">
+            <div class="row footer-top-inner-w3ls">
+                <div class="col-lg-4 col-md-6 footer-top mt-md-0 mt-sm-5">
+                    <h2>
+                        <a href="index.html"><img src="{{ asset ('bundles/images/mini_miracles.png')}}" class="img_mini"></a>
+                    </h2>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-5">
+                    <div class="footer-w3pvt">
+                        <h3 class="mb-3 w3pvt_title">Horaire</h3>
+                        <hr>
+                        <ul class="list-info-w3pvt last-w3ls-contact mt-lg-4">
+                            <li>
+                                <p>Lundi-Vendredi 7:30 - 18.00 </p>
+
+                            </li>
+                            <li class="my-2">
+                                <p>Samedi 9.00 - 17.00 </p>
+
+                            </li>
+                            <li class="my-2">
+                                <p>Dimanche 10.00 - 14.00 </p>
+
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="copy-right-grids text-li text-center my-sm-4 my-4">© 2020 Mini Miracles. All Rights Reserved
+            <a href="http://w3layouts.com/">  </a>
+        </p>
+        <div class="w3ls-footer text-center mt-4">
+            <ul class="list-unstyled w3ls-icons">
+                <li>
+                    <a href="https://www.facebook.com/Mini-miracles-111434410537458/?modal=admin_todo_tour">
+                        <span class="fa fa-facebook-f"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-twitter"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-dribbble"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-vk"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="move-top text-right"><a href="#home" class="move-top"> <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span></a></div>
+    </div>
+    <!-- //footer bottom -->
+    </div>
+</footer>
+<!-- //footer -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+    <h1>Sujet</h1>
+
+    <table>
+        <tbody>
+        <tr border="1">
+            <div class="info-box mb-3">
+                <span class="info-box-icon bg-yellow elevation-1"><i class="fa fa-comments"></i></span>
+
+                <div class="info-box-content" class="jumbotron text-center">
+                <span class="info-box-text">
+                    <div class="timeline-body">
+                      {{ sujet.contenu }}
+
+                        </div></span>
+                    <span class="info-box-number">{% if sujet.date %}{{ sujet.date|date('Y-m-d H:i:s') }}{% endif %}</span>
+                </div>
+
+            </div>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+
+
+
+    </ul>
+{% endblock %}

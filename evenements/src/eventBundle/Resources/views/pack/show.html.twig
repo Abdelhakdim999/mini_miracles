@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Pack</h1>
+
+    <table class="table table-bordered">
+            <tr >
+                <th class="table-primary">Titre</th>
+                <td>{{ pack.titre }}</td>
+            </tr>
+            <tr>
+                <th class="table-secondary">Description</th>
+                <td>{{ pack.description }}</td>
+            </tr>
+            <tr>
+                <th class="table-success">Type</th>
+                <td>{{ pack.type }}</td>
+            </tr>
+            <tr>
+                <th class="table-danger">Reduction</th>
+                <td>{{ pack.reduction }}</td>
+            </tr>
+            <tr>
+                <th class="table-warning">Image</th>
+                <td>{{ pack.image }} </td>
+            </tr>
+            <tr>
+                <th class="table-light">Dureedu</th>
+                <td>{% if pack.dureeDu %}{{ pack.dureeDu|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th class="table-dark">Dureea</th>
+                <td>{% if pack.dureeA %}{{ pack.dureeA|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('pack_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('pack_edit', { 'id': pack.id }) }}">Edit</a>
+        </li>
+        <li>
+            <a href="{{ path('pack_delete',{'id':pack.id}) }}" >Delete</a>
+        </li>
+
+    </ul>
+{% endblock %}

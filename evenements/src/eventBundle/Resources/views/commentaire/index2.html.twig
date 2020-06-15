@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Nom du sujet</h1>
+
+    <table>
+        <thead>
+
+        </div>
+        </thead>
+        <tbody>
+        {% for commentaire in commentaires %}
+
+
+
+
+
+
+        <div class="card my-4">
+            <h5 class="card-header"> </h5>
+            <div class="card-body">
+
+                <div class="form-group">
+                    {% if commentaire.date %}{{ commentaire.date|date('Y-m-d H:i:s') }}{% endif %}
+                    <br>
+
+                    <textarea disabled="" class="form-control" rows="3" name="comment" placeholder="Comment here">{{ commentaire.contenu }}</textarea>
+
+                </div>
+
+
+                <a class="btn btn-app" href="{{ path('commentaire_show', { 'id': sujet.id }) }}">
+                    <i class="fa fa-eye"></i> Aperçu
+                </a>
+
+
+
+            </div>
+
+
+
+
+
+
+        {% endfor %}
+        </div>
+        </tbody>
+
+    </table>
+
+    <ul>
+        <li>
+            <input type="submit" value="new comment" class="btn btn-primary" >
+        </li>
+    </ul>
+{% endblock %}

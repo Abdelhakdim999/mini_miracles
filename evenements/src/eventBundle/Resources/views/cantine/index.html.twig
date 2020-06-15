@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Cantines list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Heurouv</th>
+                <th>Heurferm</th>
+                <th>Capacite</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cantine in cantines %}
+            <tr>
+                <td><a href="{{ path('cantine_show', { 'id': cantine.id }) }}">{{ cantine.id }}</a></td>
+                <td>{{ cantine.heurouv }}</td>
+                <td>{{ cantine.heurferm }}</td>
+                <td>{{ cantine.capacite }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('cantine_show', { 'id': cantine.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('cantine_edit', { 'id': cantine.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cantine_new') }}">Create a new cantine</a>
+        </li>
+    </ul>
+{% endblock %}

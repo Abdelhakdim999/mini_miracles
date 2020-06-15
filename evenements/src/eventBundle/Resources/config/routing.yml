@@ -1,0 +1,377 @@
+event_homepage:
+    path:     /
+    defaults: { _controller: eventBundle:Default:index }
+event_ajouter:
+    path:     /ajouter
+    defaults: { _controller: eventBundle:evenement:ajoutEvenement }
+evenement_read:
+    path:     /read
+    defaults: { _controller: eventBundle:evenement:read }
+evenement_supprimer:
+    path:     /supprimer/{id}
+    defaults: { _controller: eventBundle:evenement:delete }
+evenement_modifier:
+    path:     /mofifier/{id}
+    defaults: { _controller: eventBundle:evenement:update }
+evenement_chercher:
+    path:     /chercher
+    defaults: { _controller: eventBundle:evenement:search }
+search:
+    path:     /search
+    defaults: { _controller: eventBundle:evenement:searchh }
+    methods:  GET
+inscription_event_search:
+    path:     /inscription/searchins
+    defaults: { _controller: eventBundle:inscription_evenement:searchins }
+    methods:  [GET, POST]
+searchF:
+    path:     /searchF
+    defaults: { _controller: eventBundle:evenement:searchF }
+    methods:  GET
+evenement_readOne:
+    path:     /readOne/{id}
+    defaults: { _controller: eventBundle:evenement:readOne }
+
+evenement_readOneFront2:
+    path:     /readOneFront2/{id}
+    defaults: { _controller: eventBundle:evenement:readOneFront2 }
+evenement_readFront:
+    path:     /readFront
+    defaults: { _controller: eventBundle:evenement:readFront }
+evenement_readFrontmobile:
+    path:     /readFrontmobile
+    defaults: { _controller: eventBundle:evenement:readFrontmobile }
+evenement_inscriAdd:
+    path:     /inscriAdd/{id}
+    defaults: { _controller: eventBundle:evenement:inscriAdd }
+evenement_affichFront:
+    path:     /affichFront/{id}
+    defaults: { _controller: eventBundle:evenement:affichFront }
+evenement_affichFront2:
+    path:     /affichFront2/{id}
+    defaults: { _controller: eventBundle:evenement:affichFront2 }
+evenement_affichFrontmobile:
+    path:     /affichFrontmobile/{id}
+    defaults: { _controller: eventBundle:evenement:affichFrontmobile }
+evenement_addEnfant:
+    path:     /addEnfant
+    defaults: { _controller: eventBundle:enfant:add }
+evenement_controle:
+    path:     /controle
+    defaults: { _controller: eventBundle:evenement:author }
+evenement_readEnfant:
+    path:     /readEnfant
+    defaults: { _controller: eventBundle:enfant:readEnfant }
+inscription_add:
+    path:     /inscription/add
+    defaults: { _controller: eventBundle:inscription_evenement:add }
+inscription_event_readOne:
+    path:     /inscription/readOne/{id}
+    defaults: { _controller: eventBundle:inscription_evenement:readOne }
+
+inscription_event_delete:
+    path:     /inscription/delete/{id}
+    defaults: { _controller: eventBundle:inscription_evenement:delete }
+
+inscription_read:
+    path:     /inscription/read
+    defaults: { _controller: eventBundle:inscription_evenement:read }
+inscription_readInscEnf:
+    path:     /inscription/readInscEnf
+    defaults: { _controller: eventBundle:inscription_evenement:readInscEnf }
+
+inscription_remplir_combo_enf:
+    path:     /inscription/remplir_combo_enf
+    defaults: { _controller: eventBundle:inscription_evenement:remplir_combo_enf }
+inscription_read2:
+    path:     /inscription/read2
+    defaults: { _controller: eventBundle:inscription_evenement:read2 }
+inscription_readmobile:
+    path:     /inscription/readmobile
+    defaults: { _controller: eventBundle:inscription_evenement:readmobile }
+inscription_readinsc:
+    path:     /inscription/readinsc
+    defaults: { _controller: eventBundle:inscription_evenement:readinsc }
+evenement_chercherFront:
+    path:     /chercherFront
+    defaults: { _controller: eventBundle:evenement:searchFront }
+evenement_readEnfantEvent:
+    path:     /readEnfantEvent
+    defaults: { _controller: eventBundle:evenement:readEnfant }
+evenement_readonefront:
+    path:     /readonefront
+    defaults: { _controller: eventBundle:evenement:readOneFront }
+
+insc_read_event:
+    path:     /readinsc/{id}
+    defaults: { _controller: eventBundle:evenement:readinsc }
+insc_read_event2:
+    path:     /readinsc2/{id}
+    defaults: { _controller: eventBundle:evenement:readinsc2 }
+ajoutInscriMobileMeriem:
+    path:     /{idEvent}/{id_enfant}/newM
+    defaults: { _controller: "eventBundle:evenement:newM" }
+
+cantine_index:
+    path:     /cantine
+    defaults: { _controller: "eventBundle:cantine:index" }
+    methods:  GET
+
+cantine_show:
+    path:     /{id}/show
+    defaults: { _controller: "eventBundle:cantine:show" }
+    methods:  GET
+
+
+
+cantine_new:
+    path:     /new
+    defaults: { _controller: "eventBundle:cantine:new" }
+    methods:  [GET, POST]
+
+cantine_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "eventBundle:cantine:edit" }
+    methods:  [GET, POST]
+
+cantine_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "eventBundle:cantine:delete" }
+    methods:  DELETE
+inscription_cantine_index:
+    path:     /inscription_cantine
+    defaults: { _controller: "eventBundle:inscription_cantine:index" }
+    methods:  GET
+
+inscription_cantine_show:
+    path:     /inscription_cantine/{id}/show
+    defaults: { _controller: "eventBundle:inscription_cantine:show" }
+    methods:  GET
+
+insccant_pdf:
+    path:     /inscription_cantine/pdf/{id}
+    defaults: { _controller: eventBundle:inscription_cantine:pdf }
+
+inscription_event_pdf:
+    path:     /inscription_event/pdf/{id}
+    defaults: { _controller: eventBundle:inscription_evenement:pdf }
+
+inscription_cantine_new:
+    path:     /inscription_cantine/new
+    defaults: { _controller: "eventBundle:inscription_cantine:new" }
+    methods:  [GET, POST]
+
+inscription_cantine_edit:
+    path:     /inscription_cantine/{id}/edit
+    defaults: { _controller: "eventBundle:inscription_cantine:edit" }
+    methods:  [GET, POST]
+
+inscription_cantine_delete:
+    path:     /inscription_cantine/{id}/delete
+    defaults: { _controller: "eventBundle:inscription_cantine:delete" }
+    methods:  DELETE
+inscription_cantine_delete2:
+    path:     /inscription_cantine/delete/{id}
+    defaults: { _controller: eventBundle:inscription_cantine:delete2 }
+menu_index:
+    path:     /menu
+    defaults: { _controller: "eventBundle:menu:index" }
+    methods:  GET
+
+menu_show:
+    path:     /menu/{id}/show
+    defaults: { _controller: "eventBundle:menu:show" }
+    methods:  GET
+
+menu_new:
+    path:     /menu/new
+    defaults: { _controller: "eventBundle:menu:new" }
+    methods:  [GET, POST]
+
+menu_edit:
+    path:     /menu/{id}/edit
+    defaults: { _controller: "eventBundle:menu:edit" }
+    methods:  [GET, POST]
+
+menu_delete:
+    path:     /menu/{id}/delete
+    defaults: { _controller: "eventBundle:menu:delete" }
+    methods:  DELETE
+
+menu_delete2:
+    path:     /menu/delete/{id}
+    defaults: { _controller: eventBundle:menu:delete2 }
+
+menu_search:
+    path:     /menu/search
+    defaults: { _controller: eventBundle:menu:search }
+    methods:  [GET, POST]
+sujet_index:
+    path:     /sujet
+    defaults: { _controller: "eventBundle:sujet:index" }
+    methods:  GET
+sujet_index2:
+    path:     /sujet2
+    defaults: { _controller: "eventBundle:sujet:index2" }
+    methods:  GET
+
+sujet_show:
+    path:     /sujet/{id}/show
+    defaults: { _controller: "eventBundle:sujet:show" }
+    methods:  GET
+
+sujet_show2:
+    path:     /sujet/{id}/show2
+    defaults: { _controller: "eventBundle:sujet:show2" }
+    methods:  GET
+sujet_readOne:
+    path:     /sujet/readOne/{id}
+    defaults: { _controller: "eventBundle:sujet:readOne" }
+
+sujet_new:
+    path:     /sujet/new
+    defaults: { _controller: "eventBundle:sujet:new" }
+    methods:  [GET, POST]
+
+sujet_commentaire:
+    path:     /sujet/{id}/comm
+    defaults: { _controller: "eventBundle:commentaire:sujcomm" }
+    methods:  [GET, POST]
+
+sujet_edit:
+    path:     /sujet/{id}/edit
+    defaults: { _controller: "eventBundle:sujet:edit" }
+    methods:  [GET, POST]
+sujet_search:
+    path:     /sujet/search
+    defaults: { _controller: "eventBundle:sujet:searchc" }
+    methods:  [GET, POST]
+
+sujet_delete:
+    path:     /sujet/{id}/delete
+    defaults: { _controller: "eventBundle:sujet:delete" }
+    methods:  DELETE
+commentaire_index:
+    path:     /commentaire
+    defaults: { _controller: "eventBundle:commentaire:index" }
+    methods:  GET
+
+commentaire_show:
+    path:     /commentaire/{id}/show
+    defaults: { _controller: "eventBundle:commentaire:show" }
+    methods:  GET
+
+commentaire_show2:
+    path:     /commentaire/{id}/show2
+    defaults: { _controller: "eventBundle:commentaire:show2" }
+    methods:  GET
+
+commentaire_new:
+    path:     /commentaire/new
+    defaults: { _controller: "eventBundle:commentaire:new" }
+    methods:  [GET, POST]
+
+commentaire_edit:
+    path:     /commentaire/{id}/edit
+    defaults: { _controller: "eventBundle:commentaire:edit" }
+    methods:  [GET, POST]
+
+commentaire_delete:
+    path:     /commentaire/{id}/delete
+    defaults: { _controller: "eventBundle:commentaire:delete" }
+    methods:  DELETE
+
+cmnt_suj:
+    path:     /commentaire/addcom/{id}
+    defaults: { _controller: "eventBundle:commentaire:AjoutComm" }
+
+menu_searchc:
+    path:     /menu/menu_searchc
+    defaults: { _controller: eventBundle:menu:searchc }
+    methods:  GET
+
+inscription_cantine_searchc:
+    path:     /inscription_cantine/inscription_cantine_searchc
+    defaults: { _controller: eventBundle:inscription_cantine:searchc }
+    methods:  GET
+
+sujet_delete2:
+    path:     /sujet/delete/{id}
+    defaults: { _controller: eventBundle:sujet:delete2 }
+
+
+sujet_readcomsujet:
+    path:     /sujet/readcomsujet/{id}
+    defaults: { _controller: eventBundle:sujet:readcomsujet }
+
+sujet_readcomsujet2:
+    path:     /sujet/readcomsujet2/{id}
+    defaults: { _controller: eventBundle:sujet:readcomsujet2 }
+
+user_redirect:
+    path:     /home
+    defaults: { _controller: eventBundle:security:redirect }
+
+pack_index:
+    path:     /pack
+    defaults: { _controller: eventBundle:pack:index }
+
+pack_index_front:
+    path:     /pack/frontt
+    defaults: { _controller: eventBundle:pack:frontt }
+    methods:  GET
+
+pack_new:
+    path:     /pack/new
+    defaults: { _controller: eventBundle:pack:new }
+pack_show:
+    path:     /pack/{id}
+    defaults: { _controller: eventBundle:pack:show }
+pack_edit:
+    path:     /pack/{id}/edit
+    defaults: { _controller: eventBundle:pack:edit }
+pack_delete:
+    path:     /pack/{id}/delete
+    defaults: { _controller: eventBundle:pack:delete }
+inscription_pack_index:
+    path:     /inscription_pack
+    defaults: { _controller: eventBundle:inscription_pack:index }
+    methods:  GET
+
+inscription_pack_new:
+    path:     /inscription_pack/new
+    defaults: { _controller: eventBundle:inscription_pack:new }
+    methods:  [GET, POST]
+
+inscription_pack_edit:
+    path:     /inscription_pack/{idInscription}/edit
+    defaults: { _controller: eventBundle:inscription_pack:edit }
+    methods:  [GET, POST]
+
+inscription_pack_delete:
+    path:     /inscription_pack/{idInscription}/delete
+    defaults: { _controller: eventBundle:inscription_pack:delete }
+
+inscription_pack_search:
+    path:     /inscription_pack/search22
+    defaults: { _controller: eventBundle:inscription_pack:search22 }
+    methods:  GET
+inscription_pack_show:
+    path:     /inscription_pack/{idInscription}/show
+    defaults: { _controller: eventBundle:inscription_pack:show}
+    methods:  GET
+
+
+inscription_pack_showF:
+    path:     /inscription_pack/showF
+    defaults: { _controller: eventBundle:inscription_pack:showF }
+    methods:  GET
+
+inscription_pack_newF:
+    path:     /inscription_pack/newF
+    defaults: { _controller: eventBundle:inscription_pack:inscriAdd }
+    methods:  [GET, POST]
+
+
+
+

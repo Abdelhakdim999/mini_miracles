@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sujet</h1>
+
+    <table>
+        <tbody>
+        <tr border="1">
+            <div class="info-box mb-3">
+                <span class="info-box-icon bg-yellow elevation-1"><i class="fa fa-comments"></i></span>
+
+                <div class="info-box-content" class="jumbotron text-center">
+                <span class="info-box-text">
+                    <div class="timeline-body">
+                        <a href="{{ path('sujet_readcomsujet', { 'id': sujet.id }) }}">  {{ sujet.contenu }}</a>
+
+                        </div></span>
+                    <span class="info-box-number">{% if sujet.date %}{{ sujet.date|date('Y-m-d H:i:s') }}{% endif %}</span>
+                </div>
+                <div>
+
+
+                    <div class="timeline-footer" class="jumbotron text-center">
+                        <a class="btn btn-warning btn-flat btn-xs" href="{{ path('sujet_edit', { 'id': sujet.id }) }}">edit sujet</a>
+                    </div>
+
+                    <div class="timeline-footer" class="jumbotron text-center">
+                        <a class="btn btn-warning btn-flat btn-xs" href="{{ path('sujet_delete2',{'id':sujet.id}) }}">Supprimer sujet</a>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+
+
+
+    </ul>
+{% endblock %}

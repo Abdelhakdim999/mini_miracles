@@ -1,0 +1,65 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+    <h1>La liste des commentaires</h1>
+
+    <table>
+
+
+
+
+        <tbody>
+
+
+        <div class="container mt-4">
+
+
+            <div class="row">
+        {% for commentaire in commentaires %}
+            <tr border="1">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-yellow elevation-1"><i class="fa fa-comments"></i></span>
+
+                    <div class="info-box-content" class="jumbotron text-center">
+                <span class="info-box-text">
+                    <div class="timeline-body">
+
+                      {{ commentaire.contenu }}
+
+                        </div></span>
+                        <span class="info-box-number">{% if commentaire.date %}{{ commentaire.date|date('Y-m-d H:i:s') }}{% endif %}</span>
+                        {{ commentaire.idUser }}
+                    </div>
+                    <div>
+
+
+
+
+                        <div class="timeline-footer" class="jumbotron text-center">
+                            <a href="{{ path('commentaire_show2', { 'id': commentaire.id }) }}">show</a>
+                        </div>
+
+                    </div>
+                </div>
+            </tr>
+
+
+        {% endfor %}
+
+            </div>
+        </div>
+
+        </tbody>
+    </table>
+
+    <ul>
+
+    </ul>
+
+    <div class="navigation">
+
+    </div>
+
+
+
+{% endblock %}

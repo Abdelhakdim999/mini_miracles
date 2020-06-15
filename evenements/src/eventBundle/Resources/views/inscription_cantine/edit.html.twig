@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Modifier inscription</h1>
+
+
+
+    {{ form_start(edit_form) }}
+    <br>
+    <br>
+    <label>Nombre de jours</label><br>
+    <input type="text" class="form-control" id="nbj" style="width: 40%; onkeypress="setprix()";  placeholder="Nombre de jour"
+    {{ form_widget(edit_form.nbrjour) }}<br><br>
+    <h3>   <label id="cc">Prix en Dinars :  </label></h3>
+    <br>
+    <h4> <label id="prixx"></label><br></h4>
+    <br>
+
+
+    <label>Prix</label><br>
+    <input type="hidden" class="form-control" id="prix" style="width: 40%; placeholder="Prix"
+    {{ form_widget(edit_form.prix) }}<br><br>
+    <label>Date de debut</label><br>
+
+    {{ form_widget(edit_form.dateInsc) }}<br><br>
+    <label>Prenom de l'enfant</label><br>
+
+    {{ form_widget(edit_form.idEnf) }}
+    <br>
+    <label>Cantine</label><br>
+
+
+    {{ form_widget(edit_form.idCant) }}
+
+    <br><br>
+
+    <input class="btn btn-app" type="submit" value="Modifier" />
+
+    {{ form_end(edit_form) }}
+
+
+
+
+
+
+
+    <a  class="btn btn-app" href="{{ path('inscription_cantine_index') }}"><i class="fa fa-align-left"></i>Retour a la liste des inscriptions</a>
+
+    <a class="btn btn-app" href="{{ path('inscription_cantine_delete2',{'id':inscription_cantine.id}) }}">
+        <i class="fa fa-trash"></i>
+    </a>
+    <script>
+        nbj.onchange = function() {
+            var x =document.getElementById("nbj").value;
+            document.getElementById("prix").value = x*2;
+            document.getElementById("prixx").innerHTML = x*2 +" DT";}
+    </script>
+
+{% endblock %}

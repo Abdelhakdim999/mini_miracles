@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b660c8c5-77b0-4afb-bcef-5d713cdad35a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="99327026-61d4-4b49-9a81-9c5b3f24ec06" />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/jsonp-callback-validator" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/jsrouting-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/adesigns/calendar-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/nomaya/social-bundle" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1ZB4d4Wvjcv1DXQg2o8IcEM4WLr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\evenements\app\Resources\views\default" />
+      <recent name="C:\wamp64\www\evenements\src\eventBundle\Resources\views\inscription_pack" />
+      <recent name="C:\wamp64\www\evenements\app\Resources\views" />
+      <recent name="C:\wamp64\www\evenements\src\eventBundle\Resources\views\inscription_evenement" />
+      <recent name="C:\wamp64\www\evenements\src\eventBundle\Resources\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\evenements\src\eventBundle\Resources\views\pack" />
+      <recent name="C:\wamp64\www\evenements\src\eventBundle\Entity" />
+      <recent name="C:\wamp64\www\evenements\app\Resources\FOSUserBundle\views\Registration" />
+      <recent name="C:\wamp64\www\evenements\app\Resources\FOSUserBundle\views\Security" />
+      <recent name="C:\wamp64\www\evenements\app\Resources" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="s doctrine:database:create" />
+      <command value="s generate:bundle" />
+      <command value="c dump-autoload" />
+      <command value="s doctrine:generate:form eventBundle:evenement" />
+      <command value="s generate:controller eventBundle:evenement" />
+      <command value="s doctrine:generate:entity" />
+      <command value="s doctrine:schema:create" />
+      <command value="s doctrine:generate:form eventBundle:parent" />
+      <command value="s doctrine:generate:form eventBundle:paren" />
+      <command value="s doctrine:generate:form eventBundle:enfant" />
+      <command value="s doctrine:generate:form eventBundle:inscription_evenement" />
+      <command value="s generate:controller" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s server:run" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="DefaultController.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/evenements/UserBundle/Controller/DefaultController.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.DefaultController.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b660c8c5-77b0-4afb-bcef-5d713cdad35a" name="Default Changelist" comment="" />
+      <created>1584299237679</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584299237679</updated>
+      <workItem from="1584299239160" duration="16349000" />
+      <workItem from="1584351292000" duration="22869000" />
+      <workItem from="1584439155430" duration="16439000" />
+      <workItem from="1584912129569" duration="262000" />
+      <workItem from="1584981473847" duration="10242000" />
+      <workItem from="1585050259431" duration="660000" />
+      <workItem from="1585076335239" duration="24186000" />
+      <workItem from="1585154875265" duration="6547000" />
+      <workItem from="1585345900761" duration="719000" />
+      <workItem from="1585848942863" duration="6160000" />
+      <workItem from="1585900808836" duration="3335000" />
+      <workItem from="1585990287158" duration="348000" />
+      <workItem from="1586041241364" duration="8516000" />
+      <workItem from="1586092819541" duration="4551000" />
+      <workItem from="1586161356833" duration="1222000" />
+      <workItem from="1586205161352" duration="7560000" />
+      <workItem from="1586279115969" duration="1947000" />
+      <workItem from="1586295341099" duration="1315000" />
+      <workItem from="1586298302627" duration="33000" />
+      <workItem from="1586371108962" duration="5709000" />
+      <workItem from="1586384705944" duration="83000" />
+      <workItem from="1586386479779" duration="134000" />
+      <workItem from="1586388579678" duration="3667000" />
+      <workItem from="1586432959385" duration="9428000" />
+      <workItem from="1586505404255" duration="2107000" />
+      <workItem from="1586694916461" duration="10900000" />
+      <workItem from="1586719059795" duration="7341000" />
+      <workItem from="1586775626644" duration="5506000" />
+      <workItem from="1586799204348" duration="122000" />
+      <workItem from="1586799369786" duration="11854000" />
+      <workItem from="1586862144666" duration="18496000" />
+      <workItem from="1586901464667" duration="2856000" />
+      <workItem from="1586956418058" duration="6413000" />
+      <workItem from="1586970165024" duration="4043000" />
+      <workItem from="1587027714766" duration="103000" />
+      <workItem from="1587034756200" duration="695000" />
+      <workItem from="1587049326811" duration="17864000" />
+      <workItem from="1587109818883" duration="969000" />
+      <workItem from="1587305248583" duration="5082000" />
+      <workItem from="1587319791409" duration="11268000" />
+      <workItem from="1587369823045" duration="2392000" />
+      <workItem from="1587412963880" duration="4514000" />
+      <workItem from="1587418012940" duration="629000" />
+      <workItem from="1587498656788" duration="3669000" />
+      <workItem from="1587582667388" duration="13241000" />
+      <workItem from="1587637909606" duration="3221000" />
+      <workItem from="1587817254543" duration="3414000" />
+      <workItem from="1587827577645" duration="435000" />
+      <workItem from="1588003514348" duration="4137000" />
+      <workItem from="1588170811044" duration="1355000" />
+      <workItem from="1588254700605" duration="5422000" />
+      <workItem from="1588335407578" duration="5554000" />
+      <workItem from="1588413072070" duration="634000" />
+      <workItem from="1588508497171" duration="2305000" />
+      <workItem from="1588536561410" duration="847000" />
+      <workItem from="1588583864924" duration="87000" />
+      <workItem from="1588606270679" duration="1807000" />
+      <workItem from="1588774414650" duration="1155000" />
+      <workItem from="1588853524848" duration="3571000" />
+      <workItem from="1588891395582" duration="46000" />
+      <workItem from="1588952949434" duration="612000" />
+      <workItem from="1589201457702" duration="1588000" />
+      <workItem from="1589244491062" duration="310000" />
+      <workItem from="1589581592882" duration="6389000" />
+      <workItem from="1589629352237" duration="4538000" />
+      <workItem from="1589665919624" duration="5824000" />
+      <workItem from="1589809387373" duration="11155000" />
+      <workItem from="1589840063764" duration="961000" />
+      <workItem from="1589928960395" duration="4212000" />
+      <workItem from="1590013346111" duration="2811000" />
+      <workItem from="1590060006224" duration="4163000" />
+      <workItem from="1590147907140" duration="2156000" />
+      <workItem from="1590182003020" duration="598000" />
+      <workItem from="1590276353564" duration="5743000" />
+      <workItem from="1590356971285" duration="3961000" />
+      <workItem from="1590405464343" duration="7410000" />
+      <workItem from="1590488812630" duration="19483000" />
+      <workItem from="1590665712921" duration="16649000" />
+      <workItem from="1590741760141" duration="10909000" />
+      <workItem from="1590851503780" duration="10706000" />
+      <workItem from="1590924072012" duration="14435000" />
+      <workItem from="1591022127049" duration="6875000" />
+      <workItem from="1591109623227" duration="14142000" />
+      <workItem from="1591185713412" duration="10520000" />
+      <workItem from="1591259922138" duration="1834000" />
+      <workItem from="1591287352187" duration="6031000" />
+      <workItem from="1591640558314" duration="157000" />
+      <workItem from="1591640728188" duration="7365000" />
+      <workItem from="1591699782402" duration="9619000" />
+      <workItem from="1591710956878" duration="716000" />
+      <workItem from="1591715950586" duration="1628000" />
+      <workItem from="1591717605454" duration="2884000" />
+      <workItem from="1591720530892" duration="5027000" />
+      <workItem from="1591725581883" duration="525000" />
+      <workItem from="1591780144102" duration="12663000" />
+      <workItem from="1591794119557" duration="9454000" />
+      <workItem from="1591873661886" duration="9203000" />
+      <workItem from="1592147431068" duration="9188000" />
+      <workItem from="1592157547801" duration="13985000" />
+      <workItem from="1592175942737" duration="681000" />
+      <workItem from="1592176967954" duration="2429000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="263" y="22" key="#CLI_Interpreters" timestamp="1586386542979">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="263" y="22" key="#CLI_Interpreters/0.0.1366.728@0.0.1366.728" timestamp="1586386542979" />
+    <state x="275" y="23" key="#Inspections" timestamp="1591786123488">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1591786123488" />
+    <state x="275" y="4" width="816" height="724" key="#Intentions" timestamp="1591143465347">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="4" width="816" height="724" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1591143465347" />
+    <state x="426" y="174" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584310283446">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="426" y="174" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1584310283446" />
+    <state x="485" y="84" key="#com.intellij.ide.util.MemberChooser" timestamp="1587817916575">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="485" y="84" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1587817916575" />
+    <state x="413" y="122" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592173389245">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="122" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1592173389245" />
+    <state x="445" y="236" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1590060558239">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="445" y="236" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1590060558239" />
+    <state x="407" y="256" key="ComposerCompositePathDialog" timestamp="1584299491858">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="407" y="256" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1584299491858" />
+    <state x="462" y="109" key="FileChooserDialogImpl" timestamp="1591705138009">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="109" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591705138009" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1591047775819">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591047775819" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1591047775818">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591047775818" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1591047775818">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591047775818" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1591047775819">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591047775819" />
+    <state x="486" y="196" key="NewPhpClassDialog" timestamp="1590965174303">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="486" y="196" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1590965174303" />
+    <state x="186" y="10" key="SettingsEditor" timestamp="1586695052185">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="186" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586695052185" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1592158091533">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1592158091533" />
+    <state x="455" y="279" key="SymfonyPathDialog" timestamp="1584299510469">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="455" y="279" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1584299510469" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1592176632496">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1592176632496" />
+    <state x="390" y="203" key="com.intellij.ide.util.TipDialog" timestamp="1592176973376">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="203" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1592176973376" />
+    <state x="339" y="164" width="672" height="677" key="run.anything.popup" timestamp="1588003765161">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="164" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1588003765161" />
+    <state x="463" y="170" key="save.file.as.template.dialog" timestamp="1591998871659">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="170" key="save.file.as.template.dialog/0.0.1366.728@0.0.1366.728" timestamp="1591998871659" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591710716274">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1591710716274" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig</url>
+          <line>46</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/eventBundle/Resources/views/inscription_pack/show.html.twig</url>
+          <line>74</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/eventBundle/Resources/views/inscription_cantine/index.html.twig</url>
+          <line>6</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

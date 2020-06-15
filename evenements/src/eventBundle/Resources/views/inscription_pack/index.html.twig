@@ -1,0 +1,137 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="jumbotron text-center">
+        <h1>   <label  for="topicOptions" style="font-size: 28px; color: #5bc0de;" class="ng-binding" >Gestion des inscriptions des packs </label> </h1>
+        <div class="input-group input-group-sm">
+            <input id="search" type="text" class="form-control" placeholder="Taper le titre">
+            <span class="input-group-btn">
+                      <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                    </span>
+        </div>
+    </div>
+
+    <ul class="nav nav-second-level" id="entitiesNav">
+    </ul>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            var searchRequest = null;
+            $("#search").keyup(function() {
+                var minlength = 1;
+                var that = this;
+                var value = $(this).val();
+                var entitySelector = $("#entitiesNav").html('');
+                if (value.length >= minlength ) {
+                    if (searchRequest != null)
+                        searchRequest.abort();
+                    searchRequest = $.ajax({
+                        type: "GET",
+                        url: "{{ path('inscription_pack_search') }}",
+                        data: {
+                            'qi' : value
+                        },
+                        dataType: "text",
+                        success: function(msg){
+                            //we need to check if the value is the same
+                            if (value===$(that).val()) {
+                                var result = JSON.parse(msg);
+                                $.each(result, function(key, arr) {
+                                    $.each(arr, function(id, value) {
+                                        if (key === 'inscription_pack') {
+                                            if (id !== 'error') {
+                                                console.log(value[2]);
+                                                entitySelector.append('<ul> ');
+                                                entitySelector.append('<li>'+value.nom+'  '+value.prenom+' :  '+value.titre+'</li>');
+                                                entitySelector.append('</ul> ');
+                                                entitySelector.append('');
+
+
+
+                                            } else {
+                                                entitySelector.append('<ul> ');
+                                                entitySelector.append('<li class="errorLi">'+"  " +value+"  "+'</li> ');
+                                                entitySelector.append('</ul> ');
+                                                entitySelector.append('');
+                                            }
+                                        }
+                                    });
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+
+
+
+    <br><br>
+
+
+
+    <TABLE class="table table-striped" >
+        <tr> <th > <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >L'enfant inscrit</label></th>
+            <th> <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Titre du pack</label></th>
+            <th> <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Date d'inscription</label></th>
+
+            <th> <label  for="topicOptions" style="font-size: 14px; color: #5bc0de;" class="ng-binding" >Actions</label> </th></tr>
+
+        {% for inscription_pack in inscription_packs %}
+            <tr>
+
+
+                <td>{{ inscription_pack.idEnfant.nom }} {{ inscription_pack.idEnfant.prenom }}</td>
+                <td>{{ inscription_pack.idPack.titre }}</td>
+                <td>{% if inscription_pack.dateInsc %}{{ inscription_pack.dateInsc|date('Y-m-d') }}{% endif %}</td>
+
+                <td>
+                    <ul>
+
+                        <a class="btn btn-app" href="{{ path('inscription_pack_show', { 'idInscription': inscription_pack.idInscription }) }}">
+                            <i class="fa fa-eye"></i>
+                        </a>
+
+                        <a class="btn btn-app" href="{{ path('inscription_pack_edit',{'idInscription':inscription_pack.idInscription}) }}">
+                            <i class="fa fa-edit"></i>
+                        </a>
+
+                        <a class="btn btn-app" href="{{ path('inscription_pack_delete',{'idInscription':inscription_pack.idInscription}) }}">
+                            <i class="fa fa-trash"></i>
+                        </a>
+
+
+
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <br></br>
+    <ul>
+        <li>
+            <div class="text-left">
+
+                <a href="{{ path('inscription_pack_new') }}" class="btn btn-primary">  <i class="fa fa-plus-square"> <br> Ajouter</i></a>
+            </div>
+
+
+
+            </div>
+
+            <div class="navigation">
+                {{ knp_pagination_render(inscription_packs) }}
+            </div>
+        </li>
+    </ul>
+
+{% endblock %}
+
+
+
+

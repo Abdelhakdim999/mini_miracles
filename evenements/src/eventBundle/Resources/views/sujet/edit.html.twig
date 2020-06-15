@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sujet edit</h1>
+
+    {{ form_start(edit_form) }}
+
+
+
+
+    <label>contenu</label><br>
+    <input type="text" class="form-control" id="prix" style="width: 40%; placeholder="Prix"
+    {{ form_widget(edit_form.contenu) }}<br><br>
+
+
+    <button class="btn btn-primary" ><i class="fa fa-edit"></i> </button>
+    {{ form_end(edit_form) }}
+    <tr>
+        <td>
+
+
+
+            <form action="{{ path('sujet_index') }}" style="display: inline-block" onsubmit="return confirm('Etes vous vraiment sur?')">
+
+                <button class="btn btn-primary"><i class="fa fa-list"></i> </button>
+
+
+            </form>
+
+
+
+
+        </td>
+
+
+    </tr>
+{% endblock %}

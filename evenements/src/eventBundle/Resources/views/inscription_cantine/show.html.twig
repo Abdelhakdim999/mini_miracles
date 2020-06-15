@@ -1,0 +1,104 @@
+
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="jumbotron text-center">
+        <h2><label  for="topicOptions" style="font-size: 28px; color: #5bc0de;" class="ng-binding" >Inscription a la cantine </label></h2>
+
+    </div>
+    <div class="jumbotron text-center">
+        <div class="container">
+
+
+            <center>
+
+
+
+
+                <fieldset style="width: 30%;margin: auto;">
+                    <TABLE class="table table-striped">
+                        <tr><td>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none;width: 200px;" >
+                                    <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f;" class="ng-binding" >L'enfant inscrit
+                                        <i class="fa fa-hourglass-half"></i></label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <br>
+                                            {{ inscription_cantine.idEnf.prenom }}  {{ inscription_cantine.idEnf.nom }}<br><br>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </td></tr>
+                        <tr><td>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none;width: 200px;"">
+                                <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f;" class="ng-binding" >Date de l'inscription
+                                    <i class="fa fa-calendar"></i></label>
+
+                                {% if inscription_cantine.dateInsc %}{{ inscription_cantine.dateInsc|date('Y-m-d') }}{% endif %}<br><br>
+
+        </div>
+        </td></tr>
+
+        <tr><td>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none;width: 280px;"">
+                <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f;" class="ng-binding" >Nombre de jour d'inscription
+                    <i class="fa fa-hourglass-half"></i></label>
+
+                {{ inscription_cantine.nbrjour }}<br><br>
+    </div>
+    </td></tr>
+
+    <tr><td>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border-bottom:none;width: 300px;"">
+            <label  for="topicOptions" style="font-size: 18px; color: #0b3e6f;" class="ng-binding" >Montant payé
+                <i class="fa  fa-money"></i> </label>
+            <br>
+
+            {{ inscription_cantine.prix }} Dinars<br><br>
+            </div>
+        </td></tr>
+
+
+
+
+
+
+
+
+    </TABLE>
+    </fieldset>
+
+    </center>
+
+
+    </div>
+    <div class="text-center">
+
+        <a  class="btn btn-app" href="{{ path('inscription_cantine_index') }}"><i class="fa fa-align-left"></i>Retour a la liste</a>
+
+        <a class="btn btn-app" href="{{ path('inscription_cantine_edit', { 'id': inscription_cantine.id }) }}">
+            <i class="fa fa-edit"></i> Modifier
+        </a>
+
+        <a class="btn btn-app" href="{{ path('insccant_pdf', { 'id': inscription_cantine.id }) }}">
+            <i class="fa fa-edit"></i> pdf
+        </a>
+
+
+
+
+        <a class="btn btn-app" href="{{ path('inscription_cantine_delete2',{'id':inscription_cantine.id}) }}">
+            <i class="fa fa-trash"></i>
+        </a>
+    </div>
+
+
+    </div>
+
+
+
+
+{% endblock %}
+

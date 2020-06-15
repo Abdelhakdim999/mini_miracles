@@ -1,0 +1,138 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+    <h1>La liste des sujets</h1>
+
+    <table>
+
+
+
+        <div class="input-group input-group-sm">
+            <input type="text" id="search" class="form-control" placeholder="Taper la date ">
+            <span class="input-group-btn">
+                      <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                    </span>
+        </div>
+        <ul class="nav nav-second-level" id="entitiesNav">
+        </ul>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                var searchRequest = null;
+                $("#search").keyup(function() {
+                    var minlength = 1;
+                    var that = this;
+                    var value = $(this).val();
+                    var entitySelector = $("#entitiesNav").html('');
+                    if (value.length >= minlength ) {
+                        if (searchRequest != null)
+                            searchRequest.abort();
+                        searchRequest = $.ajax({
+                            type: "GET",
+                            url: "{{ path('sujet_search') }}",
+                            data: {
+                                'q' : value
+                            },
+                            dataType: "text",
+                            success: function(msg){
+                                //we need to check if the value is the same
+                                if (value===$(that).val()) {
+                                    var result = JSON.parse(msg);
+                                    $.each(result, function(key, arr) {
+                                        $.each(arr, function(id, value) {
+                                            if (key === 'sujet') {
+                                                if (id !== 'error') {
+                                                    console.log(value);
+                                                    entitySelector.append('<li><a href="/evenements/web/app_dev.php/event/sujet/'+id+'/show2">'+value[0]+'<a/></li>');
+                                                } else {
+                                                    entitySelector.append('<li class="errorLi">'+value+'</li>');
+                                                }
+
+                                            }
+                                        });
+                                    });
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+
+        <br><br>
+        <tbody>
+
+        <div class="container mt-4">
+
+
+            <div class="row">
+        {% for sujet in sujets %}
+            <div class="events-slide col-lg-4 col-sm-4 col-xs-12" style="display: block;">
+                <div class="events" >
+                    <div class="events-img">
+
+
+                        <div class="info-box">
+                            <span class="info-box-icon bg-info elevation-1"><i class="fa fa-comments"></i></span>
+
+                            <div class="info-box-content">
+
+
+
+                                <h4>
+                                    <a href="{{ path('sujet_readcomsujet2',{'id':sujet.id}) }}">  {{ sujet.contenu }}</a>                  <br><br>
+
+
+                                </h4>
+                                <div class="date">
+
+
+
+                                    <div class="date-box pull-left">
+
+                                        <span class="info-box-number">{% if sujet.date %}{{ sujet.date|date('Y-m-d H:i:s') }}{% endif %}</span>
+
+                                    </div>
+                                    <br>
+                                    <br>
+
+
+
+
+                                </div>
+
+
+                                <div>
+                                    <div class="timeline-footer" class="jumbotron text-center">
+                                        <a class="btn btn-warning btn-flat btn-xs" href="{{ path('sujet_commentaire',{'id':sujet.id}) }}">ajouter commentaire </a>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+
+                </div>
+            </div>
+        {% endfor %}
+            </div>
+        </div>
+        </tbody>
+    </table>
+
+    <ul>
+
+    </ul>
+
+    <div class="navigation">
+        {{ knp_pagination_render(sujets) }}
+    </div>
+
+
+{% endblock %}
